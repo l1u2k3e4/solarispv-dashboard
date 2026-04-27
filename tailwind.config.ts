@@ -44,21 +44,43 @@ const config: Config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         sternhoff: {
-          // Platzhalter-Farben — finale Farben definiert ux-builder im nächsten Schritt
-          primary: "#1a3a6b", // Elektro-Blau
-          accent: "#f59e0b", // Akzent-Orange
-          dark: "#0f172a",
-          light: "#f8fafc",
+          primary: "#15387D",
+          "primary-dark": "#0F2A5C",
+          "primary-light": "#2B5BA6",
+          accent: "#E30613",
+          "accent-dark": "#B30410",
+          gray: "#8C8C8C",
+          "bg-light": "#F8FAFC",
+          "text-dark": "#0F172A",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-plus-jakarta-sans)", "sans-serif"],
+        sans: ["var(--font-source-sans)", "system-ui", "sans-serif"],
+        heading: ["var(--font-source-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.5)" },
+          "50%": { boxShadow: "0 0 0 12px rgba(37, 211, 102, 0)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-slow": "pulse-slow 2.5s ease-in-out infinite",
       },
     },
   },

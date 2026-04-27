@@ -38,7 +38,9 @@ Sternhoff und seine Bürokraft pflegen die Website-Inhalte NICHT selbst. Luke / 
 |---|---|---|
 | Framework | **Next.js 14** (App Router, Server Components, ISR) | SSR/SSG für 50+ Standortseiten, Metadata-API, AI-Overviews-ready |
 | Sprache | TypeScript (strict) | Typensicherheit, Refactoring-Sicherheit |
-| Styling | Tailwind CSS + shadcn/ui + Framer Motion | Schnelle Entwicklung, konsistentes Design, Animationen ohne Schmerz |
+| Styling | Tailwind CSS + shadcn/ui (Komponenten manuell kopiert wegen Tailwind-3-Stack) + Framer Motion | Schnelle Entwicklung, konsistentes Design, Animationen ohne Schmerz |
+| Schrift | **Source Sans 3** (via `next/font/google`, self-hosted) | Sternhoff wünschte „Myriad" — das ist Adobe-proprietär. Source Sans 3 ist Adobes eigene Open-Source-Antwort auf Myriad: visuell sehr ähnlich, kostenlos, DSGVO-konform, optimal für Web Performance. Geladene Weights: 400/600/700/900. |
+| Brand-Farben | Primary `#15387D` (Königsblau) · Accent `#E30613` (Industrie-Rot) · Gray `#8C8C8C` | Direkt aus dem Sternhoff-Logo abgeleitet |
 | CMS | **Sanity v3** (Studio embedded auf `/studio`) | Strukturierte Content-Pflege durch Luke / Agentur. Nicht für Sternhoff-Self-Service gedacht. |
 | Validierung | Zod | Typensichere Form-Validierung + Sanity-Schema-Spiegelung |
 | Icons | Lucide React | Konsistentes Icon-System, Tree-Shakable |

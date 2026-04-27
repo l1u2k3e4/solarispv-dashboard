@@ -1,0 +1,13 @@
+# Vercel Build Optimization — Folgendes nicht hochladen
+.lighthouse
+.next
+node_modules
+*.log
+.DS_Store
+
+# Dev-only Artefakte
+DEMO-BUILD-REPORT.md
+INIT-REPORT.md
+PROJEKTPLAN.md
+README-old.md
+tsconfig.tsbuildinfo

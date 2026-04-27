@@ -120,7 +120,7 @@
 | R1 | Hauptsitz Bochum konsequent kommunizieren ohne Castrop-Filiale zu vernachlässigen | Wireframe-Review mit Sternhoff im 1. Meeting | Luke |
 | R2 | Foto-Material (Bochum-Wahrzeichen, Team, Werkstatt, Fahrzeug) | Termin für Foto-Shooting in Phase 0 | Luke + Sternhoff |
 | R3 | Aktueller Google-Bewertungs-Score | Manuell prüfen vor Bewertungs-Widget-Einbau | seo-architect |
-| R4 | Notdienst-Realität (24/7 ja/nein, Preisrahmen) | Im 1. Meeting fragen | Luke |
+| R4 | ~~Notdienst-Realität~~ → **geklärt 27.04.2026:** Mo–Fr 7:00–23:00, Wochenende nach Vereinbarung | – | – |
 | R5 | WhatsApp-Kapazität (wer antwortet, wann) | Im 1. Meeting klären | Luke |
 | R6 | ~~Content-Pflege nach Launch~~ → **geklärt:** Luke produziert + pflegt im monatlichen Service. Sternhoff macht nichts. | – | – |
 | R7 | Sanity-DSGVO (Datenstandort EU/US) | Vor Launch entscheiden, ggf. EU-Region setzen | Luke |

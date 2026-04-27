@@ -1,0 +1,92 @@
+/**
+ * Fallback-Logik für den Chatbot, wenn `NEXT_PUBLIC_N8N_CHAT_WEBHOOK`
+ * nicht gesetzt ist (Demo-Modus auf localhost ohne n8n).
+ *
+ * Pattern-Match auf userInput (lowercase, deutsch). Keys aus Konzept
+ * Sektion 4 + Verhaltensregeln aus Prompt 15 TEIL E.
+ *
+ * Regeln (Hardgate):
+ *   - Niemals konkrete Preise nennen → "Festpreis nach Vor-Ort-Begehung"
+ *   - Bei Notfall-Keywords sofort Notdienst-Telefon + Adresse fragen
+ *   - Bei Telefonnummer: Lead-Bestätigung + Tina-Rückruf-Versprechen
+ *   - Default: Tina-Folge-Up + Stadtteil-Frage
+ */
+
+const TELEFON_REGEX = /\b\d{3,4}[\s/-]?\d{6,}\b/;
+
+const NOTFALL_KEYWORDS = [
+  "kaputt",
+  "sicherung",
+  "stromausfall",
+  "kein strom",
+  "brand",
+  "brennt",
+  "gefährlich",
+  "gefahr",
+  "rauch",
+  "funken",
+];
+
+const KOSTEN_KEYWORDS = [
+  "kosten",
+  "preis",
+  "preise",
+  "kostet",
+  "e-check",
+  "e check",
+  "echeck",
+];
+
+const WALLBOX_KEYWORDS = ["wallbox", "ladestation", "laden", "ladepunkt"];
+
+const FOERDER_KEYWORDS = [
+  "förder",
+  "foerder",
+  "förderung",
+  "foerderung",
+  "kfw",
+  "bafa",
+  "zuschuss",
+];
+
+const matches = (input: string, keywords: string[]): boolean =>
+  keywords.some((kw) => input.includes(kw));
+
+function delay(min: number, max: number): Promise<void> {
+  const ms = Math.floor(min + Math.random() * (max - min));
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export async function getMockResponse(userInput: string): Promise<string> {
+  await delay(600, 1200);
+
+  const text = userInput.toLowerCase().trim();
+
+  // 1) Telefon-Pattern → Lead-Aufnahme bestätigen
+  if (TELEFON_REGEX.test(text)) {
+    return "Vielen Dank! **Tina meldet sich morgen bei Ihnen** und bespricht alle Details persönlich.\n\nSoll ich Ihnen vorab eine Bestätigung per Mail schicken?";
+  }
+
+  // 2) Notfall-Keywords → Notdienst sofort
+  if (matches(text, NOTFALL_KEYWORDS)) {
+    return "Das klingt nach einem Notfall. Bitte rufen Sie uns sofort unter **0234 / 92 339 560** an — unser Notdienst ist Mo–Fr 7:00–23:00 erreichbar.\n\nDamit wir gleich starten können: **In welcher Straße und welchem Stadtteil befinden Sie sich?**";
+  }
+
+  // 3) Kosten / E-Check / Preisrahmen
+  if (matches(text, KOSTEN_KEYWORDS)) {
+    return "Konkrete Preise nennen wir grundsätzlich erst nach einer **kostenlosen Vor-Ort-Begehung** durch unseren Meister. Danach bekommen Sie einen **Festpreis** — keine Überraschungen.\n\nDer Ablauf:\n- Kurzes Telefonat zur Einordnung\n- Termin vor Ort (kostenlos)\n- Festpreis-Angebot schriftlich\n- Umsetzung durch unser Team\n\nIn welchem Stadtteil von Bochum sind Sie?";
+  }
+
+  // 4) Wallbox / Ladestation
+  if (matches(text, WALLBOX_KEYWORDS)) {
+    return "Wallboxen installieren wir regelmäßig in Bochum und Umgebung — inklusive Anmeldung beim Netzbetreiber, Lastmanagement und kostenloser Vor-Ort-Begehung.\n\nDamit unser Meister die passende Empfehlung geben kann: **In welchem Stadtteil sind Sie** (z. B. Wattenscheid, Riemke, Querenburg)?";
+  }
+
+  // 5) Förderung Stand 2026
+  if (matches(text, FOERDER_KEYWORDS)) {
+    return "**Stand 2026** — kurz und ehrlich:\n- **KfW 270** (PV-Kredit) ab ca. **3,27 % Zins**, weiterhin verfügbar\n- **BAFA** fördert Wärmepumpen (nicht PV direkt)\n- **NRW**: aktuell **kein landesweiter Zuschuss** für Einfamilienhäuser\n- **Bochum**: aktuell **kein eigenes PV-Programm**\n- **0 % Mehrwertsteuer** auf PV-Anlagen ≤ 30 kWp\n- **Einkommensteuer-Befreiung** für kleine PV-Anlagen\n\nQuellen: kfw.de, bundesnetzagentur.de, BDEW, Verbraucherzentrale.\n\nMöchten Sie, dass Tina Sie zur passenden Förderung individuell zurückruft?";
+  }
+
+  // 6) Default
+  return "Das schaue ich für Sie nach — **Tina meldet sich morgen bei Ihnen** mit einer fundierten Antwort.\n\nDamit unser Meister sich vorbereiten kann: **In welchem Stadtteil von Bochum** sind Sie?";
+}
