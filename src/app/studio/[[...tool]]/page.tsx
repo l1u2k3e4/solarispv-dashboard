@@ -10,12 +10,12 @@ export default function StudioPage() {
   // existenten Sanity-Project zu verbinden. Stattdessen Hinweis-Page rendern.
   if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID === "demo-stub") {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-sternhoff-bg-light p-8 text-center">
+      <div className="flex min-h-screen items-center justify-center bg-gray-50 p-8 text-center">
         <div className="max-w-lg">
-          <h1 className="mb-3 text-2xl font-bold text-sternhoff-primary">
+          <h1 className="mb-3 text-2xl font-bold text-navy-500">
             Sanity Studio · Aktivierung in Phase 2
           </h1>
-          <p className="text-sm text-sternhoff-gray">
+          <p className="text-sm text-gray-500">
             Das CMS-Dashboard wird mit dem produktiven Sanity-Setup verbunden.
             In der Demo-Vorschau ist es ausgeblendet, damit der Build stabil
             bleibt.

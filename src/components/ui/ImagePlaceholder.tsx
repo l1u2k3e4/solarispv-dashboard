@@ -24,8 +24,8 @@ export function ImagePlaceholder({
 }: Props) {
   const bg =
     variant === "branded"
-      ? "bg-sternhoff-primary/5 border-sternhoff-primary/20 text-sternhoff-primary"
-      : "bg-sternhoff-bg-light border-border text-muted-foreground";
+      ? "bg-solaris-50 border-solaris-200 text-solaris-700"
+      : "bg-gray-50 border-border text-muted-foreground";
 
   return (
     <div

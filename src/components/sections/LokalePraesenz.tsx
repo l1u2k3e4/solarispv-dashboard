@@ -6,10 +6,10 @@ import { stadtteile, standorte } from "@/lib/demo-data";
 
 export function LokalePraesenz() {
   return (
-    <section id="standorte" className="bg-sternhoff-bg-light py-16 lg:py-24">
+    <section id="standorte" className="bg-solaris-50 py-16 lg:py-24">
       <div className="container-wide">
         <div className="mb-10 max-w-2xl lg:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-sternhoff-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-solaris-700">
             Lokal verankert
           </p>
           <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
@@ -30,7 +30,7 @@ export function LokalePraesenz() {
                 {stadtteile.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded-full border border-sternhoff-primary/30 bg-white px-4 py-1.5 text-sm font-bold text-sternhoff-primary"
+                    className="rounded-full border border-solaris-200 bg-white px-4 py-1.5 text-sm font-bold text-solaris-700"
                   >
                     {tag}
                   </li>
@@ -44,14 +44,14 @@ export function LokalePraesenz() {
                   key={s.name}
                   className="rounded-lg border border-border bg-white p-5"
                 >
-                  <p className="text-xs font-bold uppercase tracking-wider text-sternhoff-accent">
+                  <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                     {s.rolle}
                   </p>
-                  <p className="mt-1 text-lg font-bold text-sternhoff-text-dark">
+                  <p className="mt-1 text-lg font-bold text-navy-500">
                     {s.name}
                   </p>
                   <p className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
-                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-sternhoff-primary" aria-hidden="true" />
+                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-solaris-700" aria-hidden="true" />
                     <span>
                       {s.strasse}<br />
                       {s.plz} {s.stadt}

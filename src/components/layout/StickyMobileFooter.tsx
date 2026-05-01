@@ -9,7 +9,7 @@ export function StickyMobileFooter() {
     >
       <a
         href={kontakt.hauptsitz.telLink}
-        className="flex h-14 items-center justify-center gap-2 bg-sternhoff-primary text-sm font-bold text-white transition-colors hover:bg-sternhoff-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+        className="flex h-14 items-center justify-center gap-2 bg-primary text-sm font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
         aria-label={`Anrufen ${kontakt.hauptsitz.tel}`}
       >
         <Phone className="h-4 w-4" />

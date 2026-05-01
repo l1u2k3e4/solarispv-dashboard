@@ -51,7 +51,7 @@ export function Sidebar({
   return (
     <aside
       className={cn(
-        "flex h-full flex-col bg-sternhoff-primary p-4 text-white",
+        "flex h-full flex-col bg-navy-500 p-4 text-white",
         className
       )}
       aria-label="Dashboard-Navigation"
@@ -81,7 +81,7 @@ export function Sidebar({
               className={cn(
                 "group relative flex w-full items-center gap-3 rounded-md border-l-4 border-transparent px-3 py-2.5 text-left text-sm font-semibold transition-colors",
                 "hover:bg-white/10",
-                isActive && "border-sternhoff-accent bg-white/15",
+                isActive && "border-solaris-500 bg-white/15",
                 item.disabled && "cursor-not-allowed opacity-60 hover:bg-transparent"
               )}
             >
@@ -89,7 +89,7 @@ export function Sidebar({
               <span className="flex-1">{item.label}</span>
               {item.badge !== undefined && item.badge > 0 && (
                 <span
-                  className="inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-sternhoff-accent px-1.5 py-0.5 text-xs font-bold leading-none text-white"
+                  className="inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-solaris-500 px-1.5 py-0.5 text-xs font-bold leading-none text-primary-foreground"
                   aria-label={`${item.badge} neue Leads`}
                 >
                   {item.badge}
@@ -108,7 +108,7 @@ export function Sidebar({
       <div className="mt-4 border-t border-white/15 pt-4">
         <div className="flex items-center gap-3">
           <span
-            className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-sternhoff-accent text-sm font-bold text-white"
+            className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-solaris-500 text-sm font-bold text-primary-foreground"
             aria-hidden="true"
           >
             T

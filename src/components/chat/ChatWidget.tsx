@@ -23,7 +23,7 @@ type Message = {
   loading?: boolean;
 };
 
-const SESSION_STORAGE_KEY = "sternhoff-chat-session";
+const SESSION_STORAGE_KEY = "solaris-pv-chat-session";
 const FALLBACK_TEXT =
   "Entschuldigung, ich habe gerade ein technisches Problem. Bitte rufen Sie uns direkt unter **0234 / 92 339 560** an.";
 const GREETING: Message = {
@@ -57,12 +57,12 @@ export function ChatWidget() {
       const fresh =
         typeof crypto !== "undefined" && "randomUUID" in crypto
           ? crypto.randomUUID()
-          : `sternhoff-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+          : `solaris-pv-${Date.now()}-${Math.random().toString(36).slice(2)}`;
       window.sessionStorage.setItem(SESSION_STORAGE_KEY, fresh);
       setSessionId(fresh);
     } catch {
       // sessionStorage may be blocked — fall back to in-memory id
-      setSessionId(`sternhoff-${Date.now()}`);
+      setSessionId(`solaris-pv-${Date.now()}`);
     }
   }, []);
 
@@ -187,7 +187,7 @@ export function ChatWidget() {
               key={`u-${index}`}
               className="flex justify-end"
             >
-              <div className="max-w-[80%] rounded-2xl rounded-br-sm bg-sternhoff-primary px-4 py-2 text-white shadow-sm">
+              <div className="max-w-[80%] rounded-2xl rounded-br-sm bg-primary px-4 py-2 text-primary-foreground shadow-sm">
                 <p className="whitespace-pre-wrap break-words text-sm leading-relaxed">
                   {message.text}
                 </p>
@@ -207,7 +207,7 @@ export function ChatWidget() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="max-w-[80%] rounded-2xl rounded-bl-sm border border-slate-200 bg-white px-4 py-2 text-sm leading-relaxed text-sternhoff-text-dark shadow-sm">
+            <div className="max-w-[80%] rounded-2xl rounded-bl-sm border border-slate-200 bg-white px-4 py-2 text-sm leading-relaxed text-foreground shadow-sm">
               {message.loading ? (
                 <span
                   className="inline-flex items-center gap-1"
@@ -219,7 +219,7 @@ export function ChatWidget() {
                 </span>
               ) : (
                 <div
-                  className="space-y-2 [&_a]:text-sternhoff-primary [&_a]:underline [&_strong]:font-semibold"
+                  className="space-y-2 [&_a]:text-solaris-700 [&_a]:underline [&_strong]:font-semibold"
                   dangerouslySetInnerHTML={{
                     __html: renderMarkdown(message.text),
                   }}
@@ -242,7 +242,7 @@ export function ChatWidget() {
       aria-label="Chatbot Elektro Sternhoff"
     >
       {/* Header */}
-      <div className="flex items-center gap-3 bg-sternhoff-primary p-4 text-white">
+      <div className="flex items-center gap-3 bg-navy-500 p-4 text-white">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
           <Image
             src="/images/logo-solaris-pv.png"
@@ -268,13 +268,13 @@ export function ChatWidget() {
 
       {/* Demo-Modus-Banner */}
       {isDemoMode ? (
-        <div className="border-b border-yellow-200 bg-yellow-50 px-4 py-1 text-xs text-sternhoff-gray">
+        <div className="border-b border-yellow-200 bg-yellow-50 px-4 py-1 text-xs text-gray-500">
           Demo-Modus · 5 Beispiel-Antworten · Live-Bot kommt mit n8n-Anbindung.
         </div>
       ) : null}
 
       {/* Messages */}
-      <div className="flex-1 space-y-3 overflow-y-auto bg-sternhoff-bg-light p-4">
+      <div className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-4">
         {renderedMessages}
         <div ref={messagesEndRef} />
       </div>
@@ -292,14 +292,14 @@ export function ChatWidget() {
           placeholder="Stellen Sie Ihre Frage..."
           aria-label="Nachricht an den Chatbot"
           rows={1}
-          className="flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm leading-relaxed text-sternhoff-text-dark outline-none transition-colors focus:border-sternhoff-primary focus:ring-1 focus:ring-sternhoff-primary"
+          className="flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm leading-relaxed text-foreground outline-none transition-colors focus:border-solaris-500 focus:ring-1 focus:ring-solaris-500"
           disabled={isSending}
         />
         <button
           type="submit"
           disabled={!input.trim() || isSending}
           aria-label="Nachricht senden"
-          className="flex shrink-0 items-center justify-center rounded-xl bg-sternhoff-accent p-3 text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex shrink-0 items-center justify-center rounded-xl bg-primary p-3 text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Send className="h-5 w-5" />
         </button>

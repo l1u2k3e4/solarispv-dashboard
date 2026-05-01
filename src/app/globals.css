@@ -4,26 +4,58 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    /* ── Surfaces ─────────────────────────────────────────────────── */
+    --background: 0 0% 100%;            /* white */
+    --foreground: 222 47% 11%;          /* gray-900 #0f172a */
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
-    --primary: 219 71% 28%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+
+    /* ── Brand ────────────────────────────────────────────────────── */
+    /* Primary = Solaris-Orange #f47603 — text on top must be navy. */
+    --primary: 28 97% 48%;              /* #f47603 */
+    --primary-foreground: 215 91% 9%;   /* navy #02152a — Navy on Orange = 6.51:1 ✅ */
+    --primary-hover: 26 87% 41%;        /* #c4600d */
+    --primary-on-surface: 24 81% 35%;   /* solaris-700 #a05010 — orange text on white = 5.75:1 ✅ */
+
+    /* Secondary = navy-50 surface (light variant) */
+    --secondary: 220 8% 92%;            /* navy-50-ish */
+    --secondary-foreground: 215 91% 9%; /* navy */
+
+    /* Muted = gray-100 surfaces, gray-600 text */
     --muted: 210 40% 96%;
-    --muted-foreground: 215 25% 35%;
-    --accent: 355 95% 46%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 355 95% 46%;
+    --muted-foreground: 215 19% 35%;    /* gray-600 #475569 (7.55:1) */
+
+    /* Accent = navy (inverse brand surface) */
+    --accent: 215 91% 9%;               /* #02152a */
+    --accent-foreground: 0 0% 100%;     /* white on navy = 18.37:1 ✅ */
+
+    /* Destructive */
+    --destructive: 0 72% 51%;           /* #dc2626 */
     --destructive-foreground: 0 0% 100%;
+
+    /* Borders / inputs / focus ring */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 219 71% 28%;
-    --radius: 0.5rem;
+    --ring: 28 97% 48%;                 /* solaris-500 focus ring */
+    --radius: 0.625rem;                 /* 10px — slightly softer than sternhoff */
+
+    /* ── CSS-Var fallbacks (used by shadows / inline style) ─────── */
+    --color-primary:        #f47603;
+    --color-primary-hover:  #c4600d;
+    --color-primary-on-surface: #a05010;
+    --color-navy:           #02152a;
+    --color-foreground:     #0f172a;
+    --color-foreground-muted: #475569;
+    --color-background:     #ffffff;
+    --color-surface-alt:    #fff4ec;
+    --color-border:         #e2e8f0;
+    --color-muted:          #64748b;
+
+    --shadow-brand-sm: 0 1px 2px 0 rgba(2, 21, 42, 0.05);
+    --shadow-brand-md: 0 4px 12px -2px rgba(2, 21, 42, 0.10);
+    --shadow-brand-lg: 0 12px 32px -8px rgba(2, 21, 42, 0.16);
   }
 }
 
@@ -37,11 +69,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-source-sans), system-ui, sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-source-sans), system-ui, sans-serif;
-    @apply font-bold tracking-tight;
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+    @apply font-bold tracking-tight text-navy-500;
+  }
+  /* Link defaults — orange-700 on white is AA-safe */
+  a {
+    color: var(--color-primary-on-surface);
+  }
+  a:hover {
+    color: var(--color-primary);
   }
 }
 
@@ -54,5 +93,9 @@
   }
   .container-wide {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  /* Solaris-on-white safe text utility */
+  .text-brand-on-white {
+    color: var(--color-primary-on-surface);
   }
 }

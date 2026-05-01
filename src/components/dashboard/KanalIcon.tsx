@@ -21,14 +21,14 @@ export function KanalIcon({ kanal, className, withLabel = false }: Props) {
       case "formular":
         return (
           <FileText
-            className={cn("h-4 w-4 text-sternhoff-primary", className)}
+            className={cn("h-4 w-4 text-navy-500", className)}
             aria-hidden="true"
           />
         );
       case "chatbot":
         return (
           <Bot
-            className={cn("h-4 w-4 text-sternhoff-primary", className)}
+            className={cn("h-4 w-4 text-navy-500", className)}
             aria-hidden="true"
           />
         );
@@ -42,7 +42,7 @@ export function KanalIcon({ kanal, className, withLabel = false }: Props) {
       case "roi-rechner":
         return (
           <Calculator
-            className={cn("h-4 w-4 text-sternhoff-accent", className)}
+            className={cn("h-4 w-4 text-solaris-700", className)}
             aria-hidden="true"
           />
         );

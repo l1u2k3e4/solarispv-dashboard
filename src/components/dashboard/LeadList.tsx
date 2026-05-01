@@ -154,8 +154,8 @@ export function LeadList({
                 className={cn(
                   "flex-1 rounded px-2 py-1.5 text-xs font-bold transition-colors",
                   isActive
-                    ? "bg-white text-sternhoff-primary shadow-sm"
-                    : "text-slate-600 hover:text-sternhoff-primary"
+                    ? "bg-white text-navy-500 shadow-sm"
+                    : "text-slate-600 hover:text-navy-500"
                 )}
               >
                 {TAB_LABEL[tab]} ({counts[tab]})
@@ -223,7 +223,7 @@ export function LeadList({
 
       <div className="flex-1 overflow-y-auto p-3">
         {filtered.length === 0 ? (
-          <div className="rounded-lg border border-dashed border-slate-300 bg-sternhoff-bg-light p-6 text-center text-sm text-slate-500">
+          <div className="rounded-lg border border-dashed border-slate-300 bg-gray-50 p-6 text-center text-sm text-slate-500">
             Keine Leads passen zu deinen Filtern.
           </div>
         ) : (
@@ -237,9 +237,9 @@ export function LeadList({
                     onClick={() => onSelect(lead.id)}
                     className={cn(
                       "w-full rounded-lg border p-4 text-left transition-all",
-                      "hover:border-sternhoff-primary hover:shadow-sm",
+                      "hover:border-navy-500 hover:shadow-sm",
                       isSelected
-                        ? "border-sternhoff-primary bg-sternhoff-primary/5"
+                        ? "border-navy-500 bg-navy-50"
                         : "border-slate-200 bg-white"
                     )}
                   >
@@ -252,7 +252,7 @@ export function LeadList({
                     </div>
                     <div
                       className={cn(
-                        "mt-2 truncate font-bold text-sternhoff-text-dark",
+                        "mt-2 truncate font-bold text-foreground",
                         lead.status === "neu" && "font-extrabold"
                       )}
                     >
@@ -262,7 +262,7 @@ export function LeadList({
                       {lead.anliegen}
                     </p>
                     <div className="mt-2 flex items-center justify-between text-xs">
-                      <span className="font-semibold text-sternhoff-primary">
+                      <span className="font-semibold text-navy-500">
                         {lead.telefon}
                       </span>
                       {lead.stadtteil && (

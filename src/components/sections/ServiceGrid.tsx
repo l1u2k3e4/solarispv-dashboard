@@ -9,7 +9,7 @@ export function ServiceGrid() {
     <section id="leistungen" className="bg-white py-16 lg:py-24">
       <div className="container-wide">
         <div className="mb-10 max-w-2xl lg:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-sternhoff-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-solaris-700">
             Unsere Leistungen
           </p>
           <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
@@ -27,18 +27,18 @@ export function ServiceGrid() {
                 key={service.slug}
                 href={href}
                 className={cn(
-                  "group relative flex flex-col rounded-xl border-2 bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-sternhoff-primary focus-visible:ring-offset-2",
+                  "group relative flex flex-col rounded-xl border bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-solaris-300 hover:shadow-brand-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                   service.highlight
-                    ? "border-sternhoff-accent bg-sternhoff-accent/5"
-                    : "border-border hover:border-sternhoff-primary"
+                    ? "border-solaris-500 bg-solaris-50"
+                    : "border-border"
                 )}
               >
                 <span
                   className={cn(
                     "mb-4 flex h-12 w-12 items-center justify-center rounded-lg",
                     service.highlight
-                      ? "bg-sternhoff-accent text-white"
-                      : "bg-sternhoff-primary/10 text-sternhoff-primary"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-solaris-50 text-solaris-700"
                   )}
                 >
                   <Icon className="h-6 w-6" aria-hidden="true" />
@@ -47,7 +47,7 @@ export function ServiceGrid() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>
-                <span className="mt-5 flex items-center gap-1 text-sm font-bold text-sternhoff-primary group-hover:gap-2 transition-all">
+                <span className="mt-5 flex items-center gap-1 text-sm font-bold text-solaris-700 group-hover:gap-2 transition-all">
                   Mehr erfahren
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>

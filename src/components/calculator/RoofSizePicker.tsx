@@ -69,15 +69,15 @@ export function RoofSizePicker({ value, onChange }: Props) {
             aria-pressed={isSelected}
             className={cn(
               "relative flex flex-col overflow-hidden rounded-xl border-2 bg-white text-left transition-all",
-              "hover:-translate-y-0.5 hover:border-sternhoff-primary hover:shadow-md",
-              "focus:outline-none focus:ring-2 focus:ring-sternhoff-primary focus:ring-offset-2",
+              "hover:-translate-y-0.5 hover:border-solaris-500 hover:shadow-md",
+              "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
               isSelected
-                ? "border-sternhoff-primary bg-sternhoff-primary/5 shadow-md"
+                ? "border-solaris-500 bg-solaris-50 shadow-md"
                 : "border-slate-200",
             )}
           >
             {isSelected && (
-              <div className="absolute right-2 top-2 z-10 rounded-full bg-sternhoff-primary p-1 text-white">
+              <div className="absolute right-2 top-2 z-10 rounded-full bg-primary p-1 text-primary-foreground">
                 <Check className="h-4 w-4" aria-hidden="true" />
               </div>
             )}
@@ -92,18 +92,18 @@ export function RoofSizePicker({ value, onChange }: Props) {
               />
             </div>
             <div className="p-3">
-              <div className="text-sm font-bold text-sternhoff-text-dark">
+              <div className="text-sm font-bold text-foreground">
                 {size.label}
               </div>
               <div className="text-xs text-muted-foreground">
                 {size.exampleType}
               </div>
               <div className="mt-2 text-xs">
-                <span className="font-medium text-sternhoff-text-dark">
+                <span className="font-medium text-foreground">
                   ~{size.squareMeters.min}–{size.squareMeters.max} m²
                 </span>
                 <span className="text-muted-foreground"> · </span>
-                <span className="font-medium text-sternhoff-primary">
+                <span className="font-medium text-solaris-700">
                   ~{size.estimatedKwp.min}–{size.estimatedKwp.max} kWp
                 </span>
               </div>

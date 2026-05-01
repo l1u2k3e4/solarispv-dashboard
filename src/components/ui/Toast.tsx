@@ -34,18 +34,18 @@ export function Toast({ open, message, onClose, variant = "success" }: Props) {
         <CheckCircle2
           className={cn(
             "h-6 w-6 flex-shrink-0",
-            variant === "success" && "text-sternhoff-primary"
+            variant === "success" && "text-solaris-700"
           )}
           aria-hidden="true"
         />
-        <p className="flex-1 text-sm leading-relaxed text-sternhoff-text-dark">
+        <p className="flex-1 text-sm leading-relaxed text-foreground">
           {message}
         </p>
         <button
           type="button"
           onClick={onClose}
           aria-label="Hinweis schließen"
-          className="flex-shrink-0 rounded p-1 text-sternhoff-gray transition-colors hover:bg-sternhoff-bg-light"
+          className="flex-shrink-0 rounded p-1 text-gray-500 transition-colors hover:bg-gray-50"
         >
           <X className="h-4 w-4" />
         </button>

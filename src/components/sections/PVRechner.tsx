@@ -178,8 +178,8 @@ export function PVRechner() {
                     className={cn(
                       "rounded-md px-3 py-1.5 text-xs font-semibold transition",
                       inputMode === "visual"
-                        ? "bg-white text-sternhoff-primary shadow-sm"
-                        : "text-muted-foreground hover:text-sternhoff-text-dark",
+                        ? "bg-white text-solaris-700 shadow-sm"
+                        : "text-muted-foreground hover:text-foreground",
                     )}
                   >
                     Über mein Haus schätzen
@@ -192,8 +192,8 @@ export function PVRechner() {
                     className={cn(
                       "rounded-md px-3 py-1.5 text-xs font-semibold transition",
                       inputMode === "manual"
-                        ? "bg-white text-sternhoff-primary shadow-sm"
-                        : "text-muted-foreground hover:text-sternhoff-text-dark",
+                        ? "bg-white text-solaris-700 shadow-sm"
+                        : "text-muted-foreground hover:text-foreground",
                     )}
                   >
                     Quadratmeter eingeben
@@ -209,7 +209,7 @@ export function PVRechner() {
                   />
                   {activeRoofSize && (
                     <p className="mt-3 text-xs text-muted-foreground">
-                      Gewähltes Beispiel: <span className="font-medium text-sternhoff-text-dark">{activeRoofSize.exampleType}</span> · ca. {activeRoofSize.squareMeters.default} m².
+                      Gewähltes Beispiel: <span className="font-medium text-foreground">{activeRoofSize.exampleType}</span> · ca. {activeRoofSize.squareMeters.default} m².
                     </p>
                   )}
                 </div>
@@ -277,7 +277,7 @@ export function PVRechner() {
                     eigenverbrauchQuote: Number(e.target.value),
                   })
                 }
-                className="mt-3 w-full accent-sternhoff-primary"
+                className="mt-3 w-full accent-solaris-500"
                 aria-valuenow={form.eigenverbrauchQuote}
               />
               <div className="mt-1 flex justify-between text-xs text-muted-foreground">
@@ -290,14 +290,14 @@ export function PVRechner() {
       </Card>
 
       <div className="space-y-5 lg:col-span-3">
-        <Card className="bg-sternhoff-primary text-white">
+        <Card className="bg-navy-500 text-white">
           <CardContent className="p-6 sm:p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-navy-100">
               Ihre Schätzung
             </p>
-            <h2 className="mt-2 text-2xl leading-tight sm:text-3xl">
+            <h2 className="mt-2 text-2xl leading-tight text-white sm:text-3xl">
               Empfohlene Anlagengröße:{" "}
-              <span className="text-sternhoff-accent">
+              <span className="text-solaris-300">
                 {formatNumber(result.kWp, 1)} kWp
               </span>
             </h2>
@@ -332,9 +332,9 @@ export function PVRechner() {
             {showVisualDisclaimer && activeRoofSize && (
               <div className="mt-6 flex items-start gap-3 rounded-lg bg-white/10 p-4 text-sm">
                 <Lightbulb className="mt-0.5 h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                <p className="text-white/90">
+                <p className="text-navy-100">
                   Berechnung basiert auf einer geschätzten Dachfläche
-                  (gewähltes Beispiel: <span className="font-bold">{activeRoofSize.exampleType}</span>,
+                  (gewähltes Beispiel: <span className="font-bold text-white">{activeRoofSize.exampleType}</span>,
                   ~{activeRoofSize.squareMeters.default} m²). Für eine genaue
                   Auslegung empfehlen wir die kostenlose Vor-Ort-Begehung.
                 </p>
@@ -343,11 +343,11 @@ export function PVRechner() {
 
             <div className="mt-4 flex items-start gap-3 rounded-lg bg-white/10 p-4 text-sm">
               <Wallet className="mt-0.5 h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <p className="text-white/90">
+              <p className="text-navy-100">
                 Geschätzte Investition:{" "}
-                <span className="font-bold">{formatEuro(result.investition)}</span>{" "}
+                <span className="font-bold text-white">{formatEuro(result.investition)}</span>{" "}
                 · Erfahrungswert Anlagen Ihrer Größenklasse: ~
-                <span className="font-bold">
+                <span className="font-bold text-white">
                   {formatNumber(result.investitionProKwp)} €/kWp
                 </span>{" "}
                 schlüsselfertig.
@@ -358,24 +358,24 @@ export function PVRechner() {
 
         <Card>
           <CardContent className="p-6 sm:p-8">
-            <h3 className="text-base font-bold text-sternhoff-text-dark">
+            <h3 className="text-base font-bold text-navy-500">
               Förderung &amp; Steuern (Stand April 2026)
             </h3>
-            <ul className="mt-3 space-y-2 text-sm text-sternhoff-text-dark">
+            <ul className="mt-3 space-y-2 text-sm text-foreground">
               <li className="flex items-start gap-2">
-                <span aria-hidden="true" className="mt-0.5 font-bold text-sternhoff-primary">✓</span>
+                <span aria-hidden="true" className="mt-0.5 font-bold text-solaris-700">✓</span>
                 <span>
                   <strong>0 % Umsatzsteuer</strong> auf Anschaffung (Nullsteuersatz für PV ≤ 30 kWp)
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <span aria-hidden="true" className="mt-0.5 font-bold text-sternhoff-primary">✓</span>
+                <span aria-hidden="true" className="mt-0.5 font-bold text-solaris-700">✓</span>
                 <span>
                   <strong>Einkommensteuer-Befreiung</strong> auf Erträge (für PV ≤ 30 kWp)
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <span aria-hidden="true" className="mt-0.5 font-bold text-sternhoff-primary">✓</span>
+                <span aria-hidden="true" className="mt-0.5 font-bold text-solaris-700">✓</span>
                 <span>
                   <strong>KfW-Kredit 270</strong> verfügbar — bis 100 % Finanzierung ab{" "}
                   {formatNumber(PV_CONSTANTS_2026.foerderung.kfw270ZinssatzAb, 2).replace(
@@ -395,21 +395,21 @@ export function PVRechner() {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-sternhoff-accent/40 bg-sternhoff-accent/5">
+        <Card className="border-2 border-solaris-300 bg-solaris-50">
           <CardContent className="p-6 sm:p-8">
-            <h3 className="flex items-center gap-2 text-base font-bold text-sternhoff-accent">
+            <h3 className="flex items-center gap-2 text-base font-bold text-solaris-800">
               <Info className="h-4 w-4" aria-hidden="true" />
               Wichtig: Das ist ein Richtwert
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-sternhoff-text-dark">
+            <p className="mt-3 text-sm leading-relaxed text-foreground">
               Diese Berechnung basiert auf Branchen-Mittelwerten für das Ruhrgebiet (Stand April 2026).
               Ihre tatsächlichen Zahlen können je nach Dachausrichtung, Verschattung, Modulwahl,
               Eigenverbrauchsverhalten und individueller Tarifsituation deutlich abweichen.
             </p>
-            <p className="mt-3 text-sm font-semibold text-sternhoff-text-dark">
+            <p className="mt-3 text-sm font-semibold text-foreground">
               Verbindliche Aussagen erst nach kostenloser Vor-Ort-Begehung durch unseren Meister.
             </p>
-            <Button asChild variant="accent" size="lg" className="mt-6 w-full sm:w-auto">
+            <Button asChild variant="default" size="lg" className="mt-6 w-full sm:w-auto">
               <Link href="/#foerderberatung">
                 Jetzt kostenlose Beratung buchen
                 <ArrowRight className="h-4 w-4" />
@@ -433,11 +433,11 @@ function ResultTile({
 }) {
   return (
     <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-      <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/80">
+      <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-navy-100">
         <Icon className="h-4 w-4" aria-hidden="true" />
         {label}
       </span>
-      <p className="mt-2 text-2xl font-bold">{value}</p>
+      <p className="mt-2 text-2xl font-bold text-white">{value}</p>
     </div>
   );
 }

@@ -16,8 +16,8 @@ export default function PVRechnerPage() {
   return (
     <>
       <Header />
-      <main className="bg-sternhoff-bg-light pb-16 lg:pb-0">
-        <section className="bg-sternhoff-primary text-white">
+      <main className="bg-gray-50 pb-16 lg:pb-0">
+        <section className="bg-navy-500 text-white">
           <div className="container-wide py-12 lg:py-16">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
               PV-Rechner · Bochum
@@ -40,7 +40,7 @@ export default function PVRechnerPage() {
 
         <section className="pb-12 lg:pb-16">
           <details className="container-wide mx-auto max-w-2xl text-xs text-muted-foreground">
-            <summary className="cursor-pointer font-medium text-sternhoff-primary hover:underline">
+            <summary className="cursor-pointer font-medium text-solaris-700 hover:underline">
               Berechnungsgrundlagen &amp; Quellen anzeigen
             </summary>
             <div className="mt-3 space-y-2 leading-relaxed">
@@ -55,7 +55,7 @@ export default function PVRechnerPage() {
                     href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html"
                     target="_blank"
                     rel="noopener"
-                    className="text-sternhoff-primary hover:underline"
+                    className="text-solaris-700 hover:underline"
                   >
                     Bundesnetzagentur
                   </a>
@@ -66,7 +66,7 @@ export default function PVRechnerPage() {
                     href="https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/"
                     target="_blank"
                     rel="noopener"
-                    className="text-sternhoff-primary hover:underline"
+                    className="text-solaris-700 hover:underline"
                   >
                     BDEW Strompreisanalyse
                   </a>
@@ -77,7 +77,7 @@ export default function PVRechnerPage() {
                     href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestandsimmobilie/Energieeffizient-Sanieren/Photovoltaik/"
                     target="_blank"
                     rel="noopener"
-                    className="text-sternhoff-primary hover:underline"
+                    className="text-solaris-700 hover:underline"
                   >
                     kfw.de
                   </a>

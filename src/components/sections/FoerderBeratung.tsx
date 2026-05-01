@@ -42,11 +42,11 @@ export function FoerderBeratung() {
   return (
     <section
       id="foerderberatung"
-      className="bg-sternhoff-bg-light py-16 lg:py-24"
+      className="bg-solaris-50 py-16 lg:py-24"
     >
       <div className="container-wide">
         <div className="mb-10 max-w-2xl lg:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-sternhoff-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-solaris-700">
             Förder-Beratung
           </p>
           <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
@@ -59,13 +59,13 @@ export function FoerderBeratung() {
             {foerderProgramme.map((p) => (
               <div
                 key={p.titel}
-                className="flex items-start gap-3 rounded-lg border border-sternhoff-primary/15 bg-white p-5"
+                className="flex items-start gap-3 rounded-lg border border-border bg-white p-5"
               >
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-sternhoff-primary/10 text-sternhoff-primary">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-solaris-50 text-solaris-700">
                   <Sparkles className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-bold text-sternhoff-text-dark">{p.titel}</p>
+                  <p className="font-bold text-navy-500">{p.titel}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {p.status}
                   </p>
@@ -79,7 +79,7 @@ export function FoerderBeratung() {
             className="rounded-xl border border-border bg-white p-6 shadow-sm sm:p-8 lg:col-span-3"
             noValidate
           >
-            <p className="text-lg font-bold text-sternhoff-text-dark">
+            <p className="text-lg font-bold text-navy-500">
               Kostenlose Erst-Beratung anfordern
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -136,7 +136,7 @@ export function FoerderBeratung() {
                 required
                 checked={form.dsgvo}
                 onChange={(e) => setForm({ ...form, dsgvo: e.target.checked })}
-                className="mt-1 h-4 w-4 rounded border-input text-sternhoff-primary focus:ring-2 focus:ring-sternhoff-primary"
+                className="mt-1 h-4 w-4 rounded border-input text-solaris-500 focus:ring-2 focus:ring-solaris-200"
               />
               <span>
                 Ich willige ein, dass Elektro Sternhoff meine Daten zur
@@ -144,7 +144,7 @@ export function FoerderBeratung() {
               </span>
             </label>
 
-            <Button type="submit" variant="accent" size="lg" className="mt-6 w-full sm:w-auto">
+            <Button type="submit" variant="default" size="lg" className="mt-6 w-full sm:w-auto">
               Beratung anfordern
             </Button>
 

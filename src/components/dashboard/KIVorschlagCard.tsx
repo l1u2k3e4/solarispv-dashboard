@@ -13,9 +13,9 @@ const TYP_LABEL: Record<KiVorschlagTyp, string> = {
 };
 
 const TYP_STYLE: Record<KiVorschlagTyp, string> = {
-  "kurz-mail": "bg-sternhoff-primary/10 text-sternhoff-primary",
+  "kurz-mail": "bg-navy-50 text-navy-500",
   whatsapp: "bg-[#128C7E]/10 text-[#128C7E]",
-  "rueckruf-best": "bg-sternhoff-accent/10 text-sternhoff-accent",
+  "rueckruf-best": "bg-solaris-50 text-solaris-700",
 };
 
 type Props = {
@@ -52,7 +52,7 @@ export function KIVorschlagCard({
     <article className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
       <header className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sternhoff-primary/10 text-sternhoff-primary">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-navy-50 text-navy-500">
             <Bot className="h-4 w-4" aria-hidden="true" />
           </span>
           <span
@@ -81,7 +81,7 @@ export function KIVorschlagCard({
           aria-label="KI-Vorschlag bearbeiten"
         />
       ) : (
-        <p className="whitespace-pre-line text-sm leading-relaxed text-sternhoff-text-dark">
+        <p className="whitespace-pre-line text-sm leading-relaxed text-foreground">
           {vorschlag.text}
         </p>
       )}
@@ -92,7 +92,7 @@ export function KIVorschlagCard({
             <button
               type="button"
               onClick={handleSave}
-              className="inline-flex h-9 items-center gap-1.5 rounded-md bg-sternhoff-primary px-3 text-xs font-bold text-white transition-colors hover:bg-sternhoff-primary-dark"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               <Check className="h-3.5 w-3.5" aria-hidden="true" />
               Speichern
@@ -111,7 +111,7 @@ export function KIVorschlagCard({
             <button
               type="button"
               onClick={() => onSend(vorschlag.text)}
-              className="inline-flex h-9 items-center gap-1.5 rounded-md bg-sternhoff-primary px-3 text-xs font-bold text-white transition-colors hover:bg-sternhoff-primary-dark"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               <Send className="h-3.5 w-3.5" aria-hidden="true" />
               Senden
@@ -119,7 +119,7 @@ export function KIVorschlagCard({
             <button
               type="button"
               onClick={() => setEditing(true)}
-              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 px-3 text-xs font-bold text-slate-700 transition-colors hover:border-sternhoff-primary hover:text-sternhoff-primary"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 px-3 text-xs font-bold text-slate-700 transition-colors hover:border-navy-500 hover:text-navy-500"
             >
               <Pencil className="h-3.5 w-3.5" aria-hidden="true" />
               Editieren
@@ -127,7 +127,7 @@ export function KIVorschlagCard({
             <button
               type="button"
               onClick={onDiscard}
-              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 px-3 text-xs font-bold text-slate-500 transition-colors hover:border-sternhoff-accent hover:text-sternhoff-accent"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 px-3 text-xs font-bold text-slate-500 transition-colors hover:border-solaris-500 hover:text-solaris-700"
             >
               <Trash2 className="h-3.5 w-3.5" aria-hidden="true" />
               Verwerfen

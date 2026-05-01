@@ -13,7 +13,7 @@ type Props = {
 };
 
 const baseBtn =
-  "inline-flex h-10 items-center justify-center gap-2 rounded-md px-3 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sternhoff-primary focus-visible:ring-offset-2";
+  "inline-flex h-10 items-center justify-center gap-2 rounded-md px-3 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
 export function ActionButtons({ lead, className }: Props) {
   const tel = buildTelLink(lead.telefon);
@@ -26,7 +26,7 @@ export function ActionButtons({ lead, className }: Props) {
         href={tel}
         className={cn(
           baseBtn,
-          "bg-sternhoff-primary text-white hover:bg-sternhoff-primary-dark"
+          "bg-primary text-primary-foreground hover:bg-primary-hover"
         )}
         aria-label={`${lead.name} anrufen`}
       >
@@ -39,7 +39,7 @@ export function ActionButtons({ lead, className }: Props) {
           href={mail}
           className={cn(
             baseBtn,
-            "border border-sternhoff-primary text-sternhoff-primary hover:bg-sternhoff-primary hover:text-white"
+            "border border-navy-500 text-navy-500 hover:bg-navy-500 hover:text-white"
           )}
           aria-label={`Mail an ${lead.name} schreiben`}
         >

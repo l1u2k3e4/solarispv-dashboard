@@ -41,7 +41,7 @@ export default function NotdienstPage() {
     <>
       <Header />
       <main className="pb-16 lg:pb-0">
-        <section className="relative overflow-hidden bg-sternhoff-accent text-white">
+        <section className="relative overflow-hidden bg-solaris-500 text-white">
           <div className="container-wide py-16 lg:py-24">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/85">
@@ -99,9 +99,9 @@ export default function NotdienstPage() {
               {ablauf.map((step) => (
                 <li
                   key={step.nr}
-                  className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-sternhoff-accent"
+                  className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
                 >
-                  <span className="text-3xl font-bold text-sternhoff-accent">
+                  <span className="text-3xl font-bold text-solaris-700">
                     {step.nr}
                   </span>
                   <h3 className="mt-3 text-lg leading-snug">{step.titel}</h3>
@@ -114,18 +114,18 @@ export default function NotdienstPage() {
           </div>
         </section>
 
-        <section className="bg-sternhoff-bg-light py-16 lg:py-20">
+        <section className="bg-gray-50 py-16 lg:py-20">
           <div className="container-narrow">
             <div className="rounded-2xl border border-border bg-white p-6 sm:p-10">
               <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-sternhoff-primary/10 text-sternhoff-primary">
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-500">
                   <Wrench className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div>
                   <h2 className="text-2xl leading-tight">Was kostet der Notdienst?</h2>
                   <p className="mt-3 leading-relaxed text-muted-foreground">
                     Wir arbeiten transparent: Notdienst-Pauschale ab{" "}
-                    <span className="font-bold text-sternhoff-text-dark">
+                    <span className="font-bold text-foreground">
                       89 € Anfahrt
                     </span>{" "}
                     plus regulärer Stundenlohn. Keine versteckten Aufschläge,

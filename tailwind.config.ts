@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // ── Semantic system tokens (HSL via CSS vars) ────────────────
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -23,6 +24,8 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
+          surface: "hsl(var(--primary-on-surface))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -43,25 +46,52 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        sternhoff: {
-          primary: "#15387D",
-          "primary-dark": "#0F2A5C",
-          "primary-light": "#2B5BA6",
-          accent: "#E30613",
-          "accent-dark": "#B30410",
-          gray: "#8C8C8C",
-          "bg-light": "#F8FAFC",
-          "text-dark": "#0F172A",
+
+        // ── Solaris brand scale (Sun-Orange #f47603) ────────────────
+        solaris: {
+          50:  "#fff4ec",
+          100: "#ffe6d4",
+          200: "#ffcfad",
+          300: "#ffb47f",
+          400: "#fd9245",
+          500: "#f47603",
+          600: "#c4600d",
+          700: "#a05010",
+          800: "#743c11",
+          900: "#42240f",
+        },
+
+        // ── Navy scale (#02152a) — Headings & dark surfaces ─────────
+        navy: {
+          50:  "#e8eaec",
+          100: "#cdcfd5",
+          200: "#9fa4ae",
+          300: "#6d7482",
+          400: "#313c4f",
+          500: "#02152a",
+          600: "#041224",
+          700: "#05101f",
+          800: "#040c19",
+          900: "#020711",
         },
       },
       fontFamily: {
-        sans: ["var(--font-source-sans)", "system-ui", "sans-serif"],
-        heading: ["var(--font-source-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
+        heading: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 6px)",
+        "2xl": "calc(var(--radius) + 12px)",
+      },
+      boxShadow: {
+        "brand-sm": "0 1px 2px 0 rgba(2, 21, 42, 0.05)",
+        "brand-md": "0 4px 12px -2px rgba(2, 21, 42, 0.10)",
+        "brand-lg": "0 12px 32px -8px rgba(2, 21, 42, 0.16)",
+        "brand-orange": "0 8px 24px -6px rgba(244, 118, 3, 0.32)",
       },
       keyframes: {
         "accordion-down": {
@@ -73,8 +103,8 @@ const config: Config = {
           to: { height: "0" },
         },
         "pulse-slow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.5)" },
-          "50%": { boxShadow: "0 0 0 12px rgba(37, 211, 102, 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(244, 118, 3, 0.5)" },
+          "50%": { boxShadow: "0 0 0 12px rgba(244, 118, 3, 0)" },
         },
       },
       animation: {

@@ -7,15 +7,16 @@ export function ROITeaser() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-wide">
-        <div className="mx-auto max-w-4xl rounded-2xl border-2 border-sternhoff-primary/15 bg-gradient-to-br from-sternhoff-bg-light to-white p-8 sm:p-12 lg:p-16">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-gradient-to-br from-solaris-50 to-white p-8 sm:p-12 lg:p-16">
           <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:gap-12">
-            <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-sternhoff-primary text-white">
+            <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
               <Calculator className="h-8 w-8" aria-hidden="true" />
             </span>
 
             <div className="flex-1">
-              <h2 className="text-2xl leading-tight sm:text-3xl">
-                Lohnt sich Ihre PV-Anlage? Rechnen Sie es selbst aus.
+              <h2 className="font-display text-2xl leading-tight sm:text-3xl">
+                Lohnt sich Ihre PV-Anlage?{" "}
+                <span className="text-solaris-700">Rechnen Sie es selbst aus.</span>
               </h2>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                 In 60 Sekunden zur ersten Schätzung: Anlagengröße, Jahresertrag,

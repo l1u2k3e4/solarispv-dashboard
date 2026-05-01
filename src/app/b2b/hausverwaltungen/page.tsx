@@ -75,7 +75,7 @@ export default function B2BHausverwaltungenPage() {
     <>
       <Header />
       <main className="pb-16 lg:pb-0">
-        <section className="bg-sternhoff-primary text-white">
+        <section className="bg-navy-500 text-white">
           <div className="container-wide grid items-center gap-10 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
@@ -126,9 +126,9 @@ export default function B2BHausverwaltungenPage() {
                 return (
                   <div
                     key={u.titel}
-                    className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-sternhoff-primary"
+                    className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-sternhoff-primary/10 text-sternhoff-primary">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-solaris-50 text-solaris-700">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
                     <h3 className="mt-4 text-lg leading-snug">{u.titel}</h3>
@@ -142,7 +142,7 @@ export default function B2BHausverwaltungenPage() {
           </div>
         </section>
 
-        <section className="bg-sternhoff-bg-light py-16 lg:py-24">
+        <section className="bg-gray-50 py-16 lg:py-24">
           <div className="container-wide">
             <h2 className="max-w-2xl text-3xl leading-tight sm:text-4xl">
               So arbeiten wir mit Ihnen.
@@ -153,7 +153,7 @@ export default function B2BHausverwaltungenPage() {
                   key={step.nr}
                   className="rounded-xl bg-white p-6 shadow-sm"
                 >
-                  <span className="text-3xl font-bold text-sternhoff-accent">
+                  <span className="text-3xl font-bold text-solaris-700">
                     {step.nr}
                   </span>
                   <h3 className="mt-3 text-xl leading-tight">{step.titel}</h3>
@@ -184,7 +184,7 @@ export default function B2BHausverwaltungenPage() {
                     aspectRatio="4:5"
                     variant="subtle"
                   />
-                  <p className="mt-4 text-xs font-bold uppercase tracking-wider text-sternhoff-accent">
+                  <p className="mt-4 text-xs font-bold uppercase tracking-wider text-solaris-700">
                     {r.ort}
                   </p>
                   <h3 className="mt-2 text-lg leading-snug">{r.titel}</h3>
@@ -204,7 +204,7 @@ export default function B2BHausverwaltungenPage() {
           </div>
         </section>
 
-        <section id="anfrage" className="bg-sternhoff-primary py-16 text-white lg:py-24">
+        <section id="anfrage" className="bg-navy-500 py-16 text-white lg:py-24">
           <div className="container-narrow">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl leading-tight sm:text-4xl">
@@ -218,7 +218,7 @@ export default function B2BHausverwaltungenPage() {
 
             <form
               onSubmit={handleSubmit}
-              className="mt-10 rounded-2xl bg-white p-6 text-sternhoff-text-dark shadow-2xl sm:p-10"
+              className="mt-10 rounded-2xl bg-white p-6 text-foreground shadow-2xl sm:p-10"
               noValidate
             >
               <div className="grid gap-4 sm:grid-cols-2">

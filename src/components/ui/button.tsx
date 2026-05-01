@@ -10,18 +10,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-sternhoff-primary text-white hover:bg-sternhoff-primary-dark",
+          "bg-primary text-primary-foreground hover:bg-primary-hover",
         accent:
-          "bg-sternhoff-accent text-white hover:bg-sternhoff-accent-dark",
+          "bg-accent text-accent-foreground hover:bg-navy-700",
         outline:
-          "border-2 border-sternhoff-primary text-sternhoff-primary hover:bg-sternhoff-primary hover:text-white",
+          "border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground",
         "outline-white":
-          "border-2 border-white text-white hover:bg-white hover:text-sternhoff-primary",
+          "border-2 border-white text-white hover:bg-white hover:text-accent",
         ghost:
-          "hover:bg-sternhoff-bg-light text-sternhoff-text-dark",
-        link: "text-sternhoff-primary underline-offset-4 hover:underline",
+          "hover:bg-gray-50 text-foreground",
+        link: "text-primary-surface underline-offset-4 hover:underline",
         destructive:
-          "bg-sternhoff-accent text-white hover:bg-sternhoff-accent-dark",
+          "bg-primary text-primary-foreground hover:bg-primary-hover",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
       },

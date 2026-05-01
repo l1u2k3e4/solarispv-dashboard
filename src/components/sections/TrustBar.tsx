@@ -15,10 +15,10 @@ export function TrustBar() {
                 key={badge.label}
                 className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3"
               >
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sternhoff-primary/10 text-sternhoff-primary">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-solaris-50 text-solaris-700">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <span className="text-sm font-bold text-sternhoff-text-dark">
+                <span className="text-sm font-bold text-navy-500">
                   {badge.label}
                 </span>
               </li>
