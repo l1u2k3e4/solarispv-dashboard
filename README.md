@@ -1,6 +1,18 @@
-# Elektro Sternhoff – Website
+# Solaris PV — Website (Moers · Niederrhein)
 
-Next.js 14 + Tailwind + Sanity v3 + Vercel. Bochum-Hauptsitz + Castrop-Filiale.
+Next.js 14 + Tailwind 3 + Sanity v3 + Vercel. Inhaber **Andreas Mellies**, Bürostandort Grünbergstr. 39a, 47445 Moers.
+
+> **Repo-Hinweis:** Aus dem Sternhoff-Build geforked. Single Source of Truth für Brand und Identität ist `CLAUDE.md` + `PROJEKTPLAN.md` + `~/Documents/Jobs/SolarisPv/_solaris-stammdaten.md` + `~/Documents/Jobs/SolarisPv/Memory.md`.
+
+## Stand
+
+Nach **Prompt 10 — Content-Migration** (2026-05-01):
+- Stammdaten verifiziert (NAP, USt-IdNr, Geo)
+- 18/18 Pages bauen grün, 6 P1-Standortseiten als SSG (`/photovoltaik/{moers,neukirchen-vluyn,kamp-lintfort,rheinberg,voerde,niederrhein}`)
+- Impressum + Datenschutz angelegt (Berufshaftpflicht + DS-Re-Generation als BLOCKER vor Live-Gang markiert)
+- Smoke-Test: 11 Routen liefern HTTP 200
+
+Blocker für Live-Gang siehe `~/Documents/Jobs/SolarisPv/_offene-fragen.md` §B1–B5.
 
 ## Setup
 
@@ -27,10 +39,23 @@ vercel --prod
 ```
 
 Region: `fra1` (Frankfurt, DSGVO + Latenz). Konfiguriert in `vercel.json`.
+**Vor dem ersten Production-Deploy:** Alle 5 BLOCKER aus `_offene-fragen.md` mit Mellies klären.
 
 ## Verweise
 
-- Root-Kontext: `CLAUDE.md`
-- Roadmap: `PROJEKTPLAN.md`
-- Subagenten: `.claude/agents/`
-- Strategie-Brief: `../analyse/06-strategie/strategie-brief.md`
+- Root-Kontext: [`CLAUDE.md`](./CLAUDE.md)
+- Roadmap: [`PROJEKTPLAN.md`](./PROJEKTPLAN.md)
+- Subagenten: [`.claude/agents/`](.claude/agents/) (TODO P10: Re-Briefing für Solaris-PV-Kontext)
+- Stammdaten (Single Source of Truth): `~/Documents/Jobs/SolarisPv/_solaris-stammdaten.md`
+- Offene Fragen an Mellies: `~/Documents/Jobs/SolarisPv/_offene-fragen.md`
+- Strategie-Brief: `~/Documents/Jobs/SolarisPv/analyse/06-strategie/strategie-brief.md`
+- Brand-Tokens + WCAG-Kontrast-Matrix: `~/Documents/Jobs/SolarisPv/_brand-tokens.md`
+
+## Wichtige Dateien
+
+- [`src/lib/demo-data.ts`](./src/lib/demo-data.ts) — Single Source of Truth für Content (Stammdaten, Services, Hersteller, FAQs, Standortseiten)
+- [`src/lib/seo/schema.ts`](./src/lib/seo/schema.ts) — JSON-LD Helpers (LocalBusiness, FAQPage, Service, BreadcrumbList, WebPage)
+- [`src/app/photovoltaik/[stadt]/page.tsx`](./src/app/photovoltaik/[stadt]/page.tsx) — dynamische Standortseiten (6 P1-Slugs als SSG)
+- [`src/app/style-guide/page.tsx`](./src/app/style-guide/page.tsx) — Token-Visualisierung (dev-only, Production noindex + 404)
+
+> **Historische Reports** (`DEPLOY.md`, `INIT-REPORT.md`, `DEMO-BUILD-REPORT.md`) stammen aus dem Sternhoff-Build und sind als „Sternhoff-historisch" markiert — nicht aktiv.
