@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Star } from "lucide-react";
+import { Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { kontakt } from "@/lib/demo-data";
@@ -26,17 +26,18 @@ export function HeroSection() {
           <div className="order-2 lg:order-1">
             <div className="max-w-xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-navy-100">
-                Elektromeisterbetrieb · Bochum + Castrop-Rauxel
+                Elektro-Meisterbetrieb · 30-km-Radius Moers · Niederrhein
               </p>
               <h1 className="mt-4 text-balance text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
-                Ihr Elektromeisterbetrieb in Bochum –
+                Ihre Anlage. Mein Name.
                 <span className="block text-solaris-300">
-                  seit Jahrzehnten zuverlässig vor Ort
+                  Meine Verantwortung.
                 </span>
               </h1>
               <p className="mt-6 text-base leading-relaxed text-navy-100 sm:text-lg">
-                Elektroinstallation · Smart Home · Wallbox · E-Check. Hauptsitz Bochum,
-                Filiale in Castrop-Rauxel.
+                Andreas Mellies, Elektro-Meister aus Moers. Ich plane jede
+                Photovoltaik-Anlage am Niederrhein persönlich — vom ersten
+                Telefonat bis zur Inbetriebnahme.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -51,22 +52,35 @@ export function HeroSection() {
                 </Button>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-navy-100">
-                <span
-                  role="img"
-                  aria-label="Bewertung 5 von 5 Sternen"
-                  className="flex items-center gap-0.5 text-solaris-400"
-                >
-                  <Star className="h-4 w-4 fill-current" aria-hidden="true" />
-                  <Star className="h-4 w-4 fill-current" aria-hidden="true" />
-                  <Star className="h-4 w-4 fill-current" aria-hidden="true" />
-                  <Star className="h-4 w-4 fill-current" aria-hidden="true" />
-                  <Star className="h-4 w-4 fill-current" aria-hidden="true" />
-                </span>
-                <span className="font-bold text-white">Meisterbetrieb</span>
-                <span className="text-navy-200">·</span>
-                <span>Innung Bochum-Hattingen</span>
-              </div>
+              <ul className="mt-6 flex flex-col gap-2 text-sm text-navy-100 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
+                <li className="flex items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-solaris-400"
+                  />
+                  <span className="font-bold text-white">
+                    Inhaber Andreas Mellies persönlich
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-solaris-400"
+                  />
+                  <span className="font-bold text-white">
+                    Festpreis nach Vor-Ort-Termin
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-solaris-400"
+                  />
+                  <span className="font-bold text-white">
+                    9 Hersteller, ehrliche Empfehlung
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
 

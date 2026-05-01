@@ -163,7 +163,7 @@ function DetailHeader({
           </div>
           <p className="mt-1 text-xs text-slate-500">
             Eingegangen am {formatEingangszeit(lead.eingangszeit)}
-            {lead.stadtteil && <> · Bochum-{lead.stadtteil}</>}
+            {lead.stadtteil && <> · Moers-{lead.stadtteil}</>}
             {lead.adresse && <> · {lead.adresse}</>}
           </p>
         </div>
@@ -235,7 +235,7 @@ function AnliegenBlock({ lead }: { lead: Lead }) {
               Stadtteil
             </dt>
             <dd className="text-sm text-foreground">
-              Bochum-{lead.stadtteil}
+              Moers-{lead.stadtteil}
             </dd>
           </div>
         )}
@@ -347,7 +347,7 @@ function NotizenBlock({
         id="notizen-heading"
         className="mb-2 text-sm font-bold uppercase tracking-wide text-gray-500"
       >
-        Tina-Notizen
+        Notizen
       </h3>
       <Textarea
         value={value}

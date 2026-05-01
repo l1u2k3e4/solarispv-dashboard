@@ -139,8 +139,8 @@ export function FoerderBeratung() {
                 className="mt-1 h-4 w-4 rounded border-input text-solaris-500 focus:ring-2 focus:ring-solaris-200"
               />
               <span>
-                Ich willige ein, dass Elektro Sternhoff meine Daten zur
-                Bearbeitung meiner Anfrage verarbeitet (Datenschutz-Erklärung).
+                Ich willige ein, dass Solaris PV (Andreas Mellies) meine Daten
+                zur Bearbeitung meiner Anfrage verarbeitet (Datenschutz-Erklärung).
               </span>
             </label>
 
@@ -149,7 +149,7 @@ export function FoerderBeratung() {
             </Button>
 
             <p className="mt-4 text-xs text-muted-foreground">
-              Demo-Hinweis: Im Live-Betrieb wird die Anfrage an Sternhoff gesendet.
+              Demo-Hinweis: Im Live-Betrieb wird die Anfrage an Solaris PV gesendet.
             </p>
           </form>
         </div>
@@ -158,7 +158,7 @@ export function FoerderBeratung() {
       <Toast
         open={toastOpen}
         onClose={() => setToastOpen(false)}
-        message="Demo: Im Live-Betrieb wird die Anfrage an Sternhoff gesendet."
+        message="Demo: Im Live-Betrieb wird die Anfrage an Solaris PV gesendet."
       />
     </section>
   );

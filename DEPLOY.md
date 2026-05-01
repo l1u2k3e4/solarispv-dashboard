@@ -1,4 +1,7 @@
-# Vercel-Deploy-Anleitung — Sternhoff-Demo
+> ⚠️ **HISTORISCHER STAND** — diese Datei stammt aus dem Sternhoff-Build vor dem Solaris-PV-Fork (siehe CLAUDE.md §1).
+> Aktuelle Solaris-PV-Deploy-Anleitung folgt in Phase 1 (PROJEKTPLAN.md §2). Für jetzt: nicht ausführen.
+
+# Vercel-Deploy-Anleitung — Sternhoff-Demo (HISTORISCH)
 
 **Ziel:** Zwei öffentliche URLs für das Sternhoff-Meeting:
 - `https://sternhoff-demo.vercel.app/` — Marketing-Site (Vater zeigt dem Kunden)

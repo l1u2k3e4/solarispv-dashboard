@@ -8,7 +8,7 @@ import { useChat } from "@/lib/chat/store";
 
 /**
  * Desktop-only Floating-Bubbles unten rechts:
- *  - oben: Chatbot-Bubble (Sternhoff-Primary)
+ *  - oben: Chatbot-Bubble (Solaris-Primary)
  *  - unten: WhatsApp-Bubble (#25D366)
  *
  * Mobile wird stattdessen durch <MobileStickyButtons> abgedeckt.

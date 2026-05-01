@@ -7,9 +7,9 @@ import { PVRechner } from "@/components/sections/PVRechner";
 
 export const metadata: Metadata = {
   title:
-    "PV-Rechner Bochum 2026 — Solar-Ertrag & Amortisation berechnen | Sternhoff",
+    "PV-Rechner Niederrhein 2026 — Solar-Ertrag & Amortisation berechnen | Solaris PV",
   description:
-    "Berechnen Sie Ertrag, Ersparnis und Amortisation Ihrer Photovoltaik-Anlage. Aktuelle Werte 2026 für Bochum & Umgebung. Kostenlose Vor-Ort-Beratung von Elektro Sternhoff.",
+    "Berechnen Sie Ertrag, Ersparnis und Amortisation Ihrer Photovoltaik-Anlage am Niederrhein. Niederrhein-Sonneneinstrahlung 950–1.050 kWh/kWp/a. Kostenlose Vor-Ort-Beratung von Solaris PV (Moers).",
 };
 
 export default function PVRechnerPage() {
@@ -20,10 +20,10 @@ export default function PVRechnerPage() {
         <section className="bg-navy-500 text-white">
           <div className="container-wide py-12 lg:py-16">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
-              PV-Rechner · Bochum
+              PV-Rechner · Niederrhein
             </p>
             <h1 className="mt-3 max-w-3xl text-balance text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              Lohnt sich Ihre PV-Anlage? Rechnen Sie es selbst aus.
+              PV-Rechner · Niederrhein
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
               Vier Eingaben, eine Schätzung. Anlagengröße, Jahresertrag,

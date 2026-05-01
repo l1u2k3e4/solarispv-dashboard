@@ -13,9 +13,23 @@ import { ROITeaser } from "@/components/sections/ROITeaser";
 import { NotdienstBlock } from "@/components/sections/NotdienstBlock";
 
 export const metadata: Metadata = {
-  title: "Elektromeister in Bochum – Sternhoff GmbH",
+  title:
+    "Photovoltaik Moers · PV-Anlage vom Elektro-Meisterbetrieb · Solaris PV",
   description:
-    "Elektroinstallation, Smart Home, Wallbox & PV vom Bochumer Meisterbetrieb. Hauptsitz Bessemerstr. 80, Filiale Castrop-Rauxel. Notdienst Mo–Fr.",
+    "Solaris PV: Photovoltaik, Speicher, Wallbox & Wärmepumpe vom Elektro-Meisterbetrieb in Moers. Andreas Mellies plant jede Anlage persönlich. Festpreis nach Vor-Ort-Termin. ☎ 02841 / 816 37 27",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title:
+      "Photovoltaik Moers · PV-Anlage vom Elektro-Meisterbetrieb · Solaris PV",
+    description:
+      "PV-Anlage, Speicher und Wallbox aus einer Hand. Elektro-Meisterbetrieb in Moers — Andreas Mellies persönlich.",
+    url: "/",
+    images: ["/og-image.png"],
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function HomePage() {

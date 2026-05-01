@@ -40,7 +40,7 @@ import { cn } from "@/lib/utils";
 type FormState = {
   stromverbrauch: number;
   dachflaeche: number;
-  standort: "bochum" | "castrop" | "ruhrgebiet";
+  standort: "moers" | "duisburg" | "krefeld" | "niederrhein";
   eigenverbrauchQuote: number;
 };
 
@@ -71,7 +71,7 @@ export function PVRechner() {
   const [form, setForm] = useState<FormState>({
     stromverbrauch: 4500,
     dachflaeche: DEFAULT_VISUAL_SIZE.squareMeters.default,
-    standort: "bochum",
+    standort: "moers",
     eigenverbrauchQuote: 50,
   });
 
@@ -251,10 +251,11 @@ export function PVRechner() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="bochum">Bochum</SelectItem>
-                  <SelectItem value="castrop">Castrop-Rauxel</SelectItem>
-                  <SelectItem value="ruhrgebiet">
-                    Sonstiges Ruhrgebiet
+                  <SelectItem value="moers">Moers</SelectItem>
+                  <SelectItem value="duisburg">Duisburg</SelectItem>
+                  <SelectItem value="krefeld">Krefeld</SelectItem>
+                  <SelectItem value="niederrhein">
+                    Sonstiger Niederrhein
                   </SelectItem>
                 </SelectContent>
               </Select>
@@ -388,7 +389,7 @@ export function PVRechner() {
             </ul>
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
               Hinweis: NRW gewährt 2026 keine Zuschüsse mehr für klassische
-              EFH-Dachanlagen. Stadt Bochum hat aktuell kein eigenes
+              EFH-Dachanlagen. Stadt Moers hat aktuell kein eigenes
               PV-Programm — Quartiersförderungen nur für Mieterstrom / MFH-Speicher.
               Modul-Preise können seit April 2026 leicht steigen (China-Exportsteuer + Silberkosten).
             </p>
@@ -402,7 +403,7 @@ export function PVRechner() {
               Wichtig: Das ist ein Richtwert
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-foreground">
-              Diese Berechnung basiert auf Branchen-Mittelwerten für das Ruhrgebiet (Stand April 2026).
+              Diese Berechnung basiert auf Branchen-Mittelwerten für den Niederrhein (Stand April 2026).
               Ihre tatsächlichen Zahlen können je nach Dachausrichtung, Verschattung, Modulwahl,
               Eigenverbrauchsverhalten und individueller Tarifsituation deutlich abweichen.
             </p>

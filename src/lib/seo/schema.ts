@@ -1,14 +1,13 @@
 // Schema.org JSON-LD Helpers — Solaris PV
-// Brand-Migration Prompt 09 (Subagent C). NAP-Quelle: Memory.md §Brand-Token + §7-Tabelle.
 // Inhaber: Andreas Mellies. Marketing-Standort: Grünbergstr. 39a, 47445 Moers.
 // Sitz (Impressum): Birkenstr. 12, 47447 Moers.
+// Werte verifiziert in Prompt 10 — Quellen siehe ../../_solaris-stammdaten.md
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.solarispv.de";
 
-// TODO P10 Telefon und E-Mail final aus Impressum / Mellies-Briefing übernehmen.
-const TELEPHONE_PLACEHOLDER = "+49 2841 ____"; // TODO P10
-const EMAIL_PLACEHOLDER = "info@solarispv.de"; // TODO P10
+const TELEPHONE = "+4928418163727"; // E.164 — Quelle: solarispv.de/impressum
+const EMAIL = "energie@solarispv.de"; // Quelle: solarispv.de/impressum
 
 const LOGO_PATH = "/images/logo-solaris-pv.png";
 
@@ -24,10 +23,17 @@ export const BUERO_MOERS = {
   addressCountry: "DE",
 } as const;
 
+/** Geokoordinaten Bürostandort — OSM Nominatim 2026-05-01 (Straße, nicht Hausnummer) */
+export const BUERO_GEO = {
+  "@type": "GeoCoordinates",
+  latitude: 51.4726644,
+  longitude: 6.6039919,
+} as const;
+
 /** Sitz für Impressum / LegalAddress */
 export const IMPRESSUM_MOERS = {
   "@type": "PostalAddress",
-  streetAddress: "Birkenstr. 12",
+  streetAddress: "Birkenstraße 12",
   postalCode: "47447",
   addressLocality: "Moers",
   addressRegion: "NRW",
@@ -37,23 +43,40 @@ export const IMPRESSUM_MOERS = {
 /** Solaris PV Business-Stammdaten (Inhaber Andreas Mellies) */
 export const LOCAL_BUSINESS_BASE = {
   name: "Solaris PV",
-  // TODO Rechtsform mit Mellies klären (Einzelunternehmen / e.K. / GmbH).
-  legalName: "Solaris PV Andreas Mellies",
+  // ❓ Rechtsform vor Live-Gang verifizieren (Einzelunternehmen / e.K. / GmbH); siehe _offene-fragen.md B2
+  legalName: "SolarisPV Inh. Andreas Mellies",
   founderName: "Andreas Mellies",
   description:
-    "Solaris PV – Photovoltaik-Fachbetrieb aus Moers für den Niederrhein. Planung, Installation, Wartung von PV-Anlagen, Speichern, Wallboxen.",
+    "Solaris PV — Photovoltaik vom Elektro-Meisterbetrieb in Moers. Andreas Mellies plant PV-Anlagen, Speicher, Wallboxen und Wärmepumpen für den Niederrhein persönlich.",
   url: SITE_URL,
-  telephone: TELEPHONE_PLACEHOLDER,
-  email: EMAIL_PLACEHOLDER,
+  telephone: TELEPHONE,
+  email: EMAIL,
   image: `${SITE_URL}${LOGO_PATH}`,
   logo: `${SITE_URL}${LOGO_PATH}`,
   priceRange: "€€",
-  areaServed: ["Moers", "Krefeld", "Duisburg", "Niederrhein"],
+  vatID: "DE216715857",
+  areaServed: [
+    "Moers",
+    "Neukirchen-Vluyn",
+    "Kamp-Lintfort",
+    "Rheinberg",
+    "Voerde",
+    "Duisburg",
+    "Krefeld",
+    "Dinslaken",
+    "Niederrhein",
+  ],
 } as const;
 
 // --- Helper-Types ---------------------------------------------------------
 
-export type Standort = "moers";
+export type Standort =
+  | "moers"
+  | "neukirchen-vluyn"
+  | "kamp-lintfort"
+  | "rheinberg"
+  | "voerde"
+  | "niederrhein";
 
 type FaqItem = { question: string; answer: string };
 
@@ -65,7 +88,7 @@ type BreadcrumbItem = { name: string; url: string };
  * JSON-LD LocalBusiness / ProfessionalService Schema für Solaris PV.
  * Nutzt dual `@type` für maximale Rich-Result-Kompatibilität.
  *
- * @param standort optional. Default = "moers" (aktuell einziger Standort).
+ * @param standort optional. Default = "moers" (Bürostandort).
  */
 export function localBusinessSchema(standort?: Standort) {
   // Solaris hat aktuell nur einen Standort — Argument ist Vorbereitung für spätere Filialen.
@@ -73,7 +96,7 @@ export function localBusinessSchema(standort?: Standort) {
 
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@type": ["LocalBusiness", "ProfessionalService", "Electrician"],
     "@id": `${SITE_URL}/#localbusiness`,
     name: LOCAL_BUSINESS_BASE.name,
     legalName: LOCAL_BUSINESS_BASE.legalName,
@@ -84,9 +107,11 @@ export function localBusinessSchema(standort?: Standort) {
     image: LOCAL_BUSINESS_BASE.image,
     logo: LOCAL_BUSINESS_BASE.logo,
     priceRange: LOCAL_BUSINESS_BASE.priceRange,
+    vatID: LOCAL_BUSINESS_BASE.vatID,
     // Marketing-Standort als primäre Adresse, Impressum-Sitz als zweite Adresse.
     // Google liest die erste Adresse als NAP-Citation.
     address: [BUERO_MOERS, IMPRESSUM_MOERS],
+    geo: BUERO_GEO,
     areaServed: LOCAL_BUSINESS_BASE.areaServed.map((name) => ({
       "@type": "City",
       name,
@@ -94,15 +119,14 @@ export function localBusinessSchema(standort?: Standort) {
     founder: {
       "@type": "Person",
       name: LOCAL_BUSINESS_BASE.founderName,
-      jobTitle: "Inhaber & Geschäftsführer",
+      jobTitle: "Inhaber & Elektro-Meister",
     },
-    // openingHoursSpecification: TODO P10 öffnungszeiten verifizieren
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "17:00",
+        opens: "09:00",
+        closes: "16:00",
       },
     ],
     sameAs: [] as string[],

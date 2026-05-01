@@ -25,7 +25,7 @@ export function MobileStickyButtons() {
       >
         <a
           href={kontakt.hauptsitz.telLink}
-          aria-label="Sternhoff anrufen"
+          aria-label="Solaris PV anrufen"
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary py-4 text-lg font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <Phone className="h-5 w-5" aria-hidden="true" />

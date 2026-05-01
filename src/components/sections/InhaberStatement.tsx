@@ -22,26 +22,21 @@ export function InhaberStatement() {
               Inhaber-Statement
             </p>
             <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
-              Gerhard Sternhoff – Ihr Elektromeister in Bochum
+              Andreas Mellies — Ihr Elektro-Meister in Moers
             </h2>
 
             <blockquote className="mt-8 border-l-4 border-solaris-500 pl-6 text-lg italic leading-relaxed text-foreground sm:text-xl">
-              „Ich bin mit dem Ruhrgebiet aufgewachsen und kenne die Häuser hier
-              – vom Altbau in Linden bis zum Mehrfamilienhaus in Wattenscheid.
-              Wenn Sie uns rufen, löst meine Mannschaft das Problem. Beim ersten
-              Mal.“
+              „Ich plane jede Anlage selbst — und stehe persönlich dafür gerade.
+              Das ist mein Versprechen seit der ersten Solaris-PV-Anlage.“
             </blockquote>
 
             <p className="mt-6 font-display text-sm font-semibold text-navy-500">
-              — Gerhard Sternhoff
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Geschäftsführer · Elektro Sternhoff GmbH
+              — Andreas Mellies, Inhaber & Elektro-Meister · SolarisPV
             </p>
 
             <p className="mt-8 border-t border-border pt-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-              Meisterbetrieb · Innung Bochum-Hattingen · ~20 Mitarbeiter ·
-              Standorte Bochum + Castrop-Rauxel
+              Elektro-Meisterbetrieb · 9 Hersteller-Partnerschaften ·
+              30-km-Radius Moers
             </p>
           </div>
         </div>

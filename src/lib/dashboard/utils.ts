@@ -95,9 +95,9 @@ export function digitsOnly(input: string): string {
 
 export function buildWhatsAppLink(telefon: string, name: string): string {
   const digits = digitsOnly(telefon);
-  // 0234... -> 4923... (DE)
+  // 02841... -> 492841... (DE)
   const intl = digits.startsWith("0") ? `49${digits.slice(1)}` : digits;
-  const greeting = `Guten Tag${name ? " " + name.split(" ").slice(-1)[0] : ""}, hier Tina von Elektro Sternhoff. Vielen Dank für Ihre Anfrage – wie kann ich Ihnen weiterhelfen?`;
+  const greeting = `Guten Tag${name ? " " + name.split(" ").slice(-1)[0] : ""}, hier Solaris PV — Andreas Mellies. Vielen Dank für Ihre Anfrage – wie kann ich Ihnen weiterhelfen?`;
   return `https://wa.me/${intl}?text=${encodeURIComponent(greeting)}`;
 }
 
@@ -106,8 +106,8 @@ export function buildMailLink(
   anliegen: string
 ): string | null {
   if (!email) return null;
-  const subject = "Ihre Anfrage bei Elektro Sternhoff";
-  const body = `Guten Tag,\n\nvielen Dank für Ihre Anfrage:\n\n„${anliegen}"\n\nWir melden uns kurzfristig bei Ihnen.\n\nFreundliche Grüße\nTina · Elektro Sternhoff GmbH\n0234 92339560`;
+  const subject = "Ihre Anfrage bei Solaris PV";
+  const body = `Guten Tag,\n\nvielen Dank für Ihre Anfrage:\n\n„${anliegen}"\n\nWir melden uns kurzfristig bei Ihnen.\n\nFreundliche Grüße\nSolaris PV · Andreas Mellies · 02841 / 816 37 27`;
   return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 

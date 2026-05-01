@@ -13,15 +13,14 @@ export function ServiceGrid() {
             Unsere Leistungen
           </p>
           <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
-            Sechs Bereiche – ein Meisterbetrieb für alles, was Strom braucht.
+            Was wir installieren — sieben Leistungen, eine Hand.
           </h2>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;
-            const href =
-              service.slug === "notdienst" ? "/notdienst" : "/#leistungen";
+            const href = "/#leistungen";
             return (
               <Link
                 key={service.slug}

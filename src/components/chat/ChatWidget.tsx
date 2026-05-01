@@ -25,10 +25,10 @@ type Message = {
 
 const SESSION_STORAGE_KEY = "solaris-pv-chat-session";
 const FALLBACK_TEXT =
-  "Entschuldigung, ich habe gerade ein technisches Problem. Bitte rufen Sie uns direkt unter **0234 / 92 339 560** an.";
+  "Entschuldigung, ich habe gerade ein technisches Problem. Bitte rufen Sie uns direkt unter **02841 / 816 37 27** an.";
 const GREETING: Message = {
   role: "bot",
-  text: "Hallo! Ich bin der KI-Assistent von Elektro Sternhoff. Wie kann ich Ihnen helfen?",
+  text: "Hallo! Ich bin der KI-Assistent von Solaris PV. Wie kann ich Ihnen helfen?",
   timestamp: "",
 };
 
@@ -239,7 +239,7 @@ export function ChatWidget() {
       className="fixed inset-0 z-50 flex flex-col bg-white shadow-2xl lg:inset-auto lg:bottom-6 lg:right-6 lg:h-[600px] lg:max-h-[80vh] lg:w-[380px] lg:overflow-hidden lg:rounded-2xl"
       role="dialog"
       aria-modal="true"
-      aria-label="Chatbot Elektro Sternhoff"
+      aria-label="Chatbot Solaris PV"
     >
       {/* Header */}
       <div className="flex items-center gap-3 bg-navy-500 p-4 text-white">
@@ -253,7 +253,7 @@ export function ChatWidget() {
           />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="truncate font-bold leading-tight">Elektro Sternhoff</p>
+          <p className="truncate font-bold leading-tight">Solaris PV</p>
           <p className="text-xs opacity-80">Wir antworten in Min.</p>
         </div>
         <button

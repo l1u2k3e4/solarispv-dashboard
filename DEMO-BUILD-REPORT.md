@@ -1,4 +1,7 @@
-# Demo-Build-Report — Elektro Sternhoff
+> ⚠️ **HISTORISCHER STAND** — diese Datei stammt aus dem Sternhoff-Build vor dem Solaris-PV-Fork.
+> Aktueller Solaris-PV-Stand: PROJEKTPLAN.md + CLAUDE.md + Memory.md (Solaris).
+
+# Demo-Build-Report — Elektro Sternhoff (HISTORISCH, Sternhoff-Vorlage)
 
 **Stand:** 2026-04-27 (Vorabend Sternhoff-Meeting 28.04.2026)
 **Verantwortlich:** Luke Kozik · Build durch Claude Code (Demo-Build-Engineer)

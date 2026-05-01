@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Elektrohandwerk für Hausverwaltungen im Ruhrgebiet",
+  title: "Photovoltaik für Hausverwaltungen am Niederrhein · Solaris PV",
   description:
-    "Rahmenverträge, E-Check, 24/7-Notfall-SLA und Festpreise je MFH. Elektro Sternhoff arbeitet aus Bochum + Castrop-Rauxel für Hausverwaltungen.",
+    "Mieterstrom, Wallbox-Park, PV-Großanlagen und E-Check für Mehrfamilienhäuser. Solaris PV arbeitet vom Bürostandort Moers für Hausverwaltungen am Niederrhein.",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

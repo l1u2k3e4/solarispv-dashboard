@@ -26,15 +26,15 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 12 * MIN),
       status: "neu",
       name: "Familie Müller",
-      telefon: "0234 1234567",
+      telefon: "02841 1234567",
       email: "familie.mueller@example.de",
       anliegen:
-        "Hallo, wir wollen eine Wallbox in unserem Einfamilienhaus in Bochum-Linden installieren lassen. Tesla Model Y, ca. 11 kW. Zählerschrank ist von 2018. Was kostet das ungefähr und wann hätten Sie Zeit?",
-      adresse: "Lindener Hauptstr., 44879 Bochum",
-      stadtteil: "Linden",
+        "Hallo, wir wollen eine Wallbox in unserem Einfamilienhaus in Moers-Repelen installieren lassen. Tesla Model Y, ca. 11 kW. Zählerschrank ist von 2018. Was kostet das ungefähr und wann hätten Sie Zeit?",
+      adresse: "Repelener Str., 47445 Moers",
+      stadtteil: "Repelen",
       chatVerlauf: [
         {
-          user: "Hi, ich suche eine Wallbox-Installation für Bochum-Linden.",
+          user: "Hi, ich suche eine Wallbox-Installation für Moers-Repelen.",
           bot: "Gerne! Damit ich passend antworten kann: Welches Auto laden Sie und wie alt ist Ihr Zählerschrank?",
         },
         {
@@ -43,18 +43,18 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
         },
         {
           user: "Egal, Hauptsache 11 kW und förderfähig. Können Sie mich anrufen?",
-          bot: "Klar! Tina aus dem Büro meldet sich morgen Vormittag bei Ihnen. Ich notiere die Eckdaten.",
+          bot: "Klar! Wir melden uns morgen Vormittag bei Ihnen. Ich notiere die Eckdaten.",
         },
       ],
       kiVorschlaege: [
         {
           typ: "kurz-mail",
-          text: "Sehr geehrte Familie Müller,\n\nvielen Dank für Ihre Anfrage zur Wallbox-Installation in Bochum-Linden. Auf Basis Ihrer Angaben (Tesla Model Y, Zählerschrank Bj. 2018) ist eine 11-kW-Wallbox ohne Umbau realistisch.\n\nWir rufen Sie morgen zwischen 9 und 10 Uhr an, um den Vor-Ort-Termin abzustimmen — Festpreis erhalten Sie direkt nach der Begehung.\n\nFreundliche Grüße\nTina · Elektro Sternhoff GmbH\n0234 92339560",
+          text: "Sehr geehrte Familie Müller,\n\nvielen Dank für Ihre Anfrage zur Wallbox-Installation in Moers-Repelen. Auf Basis Ihrer Angaben (Tesla Model Y, Zählerschrank Bj. 2018) ist eine 11-kW-Wallbox ohne Umbau realistisch.\n\nWir rufen Sie morgen zwischen 9 und 10 Uhr an, um den Vor-Ort-Termin abzustimmen — Festpreis erhalten Sie direkt nach der Begehung.\n\nFreundliche Grüße\nSolaris PV · Andreas Mellies · 02841 / 816 37 27",
           confidence: 0.85,
         },
         {
           typ: "whatsapp",
-          text: "Hallo Familie Müller, hier Tina von Elektro Sternhoff. Vielen Dank für Ihre Anfrage zur Wallbox in Linden. Passt es, wenn ich Sie morgen Vormittag kurz anrufe? Vor-Ort-Termin können wir dann direkt einplanen.",
+          text: "Hallo Familie Müller, hier Solaris PV. Vielen Dank für Ihre Anfrage zur Wallbox in Repelen. Passt es, wenn wir Sie morgen Vormittag kurz anrufen? Vor-Ort-Termin können wir dann direkt einplanen.",
           confidence: 0.74,
         },
       ],
@@ -65,12 +65,12 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 1 * DAY + 2 * HOUR),
       status: "neu",
       name: "Hans Schmidt",
-      telefon: "0234 8765432",
+      telefon: "02841 8765432",
       email: "h.schmidt@example.de",
       anliegen:
         "Habe online den ROI-Rechner durchgespielt — 50 m² Süddach, ca. 9 kWp. Möchte gerne ein verbindliches Angebot inkl. Speicher-Option.",
-      adresse: "44869 Bochum",
-      stadtteil: "Wattenscheid",
+      adresse: "47445 Moers",
+      stadtteil: "Asberg",
       pvBerechnung: {
         kwp: 9,
         investition: 15300,
@@ -91,14 +91,14 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 1 * DAY + 5 * HOUR),
       status: "in-bearbeitung",
       name: "Hausverwaltung Becker",
-      telefon: "0234 4455667",
+      telefon: "02841 4455667",
       email: "becker@hv-becker.de",
       anliegen:
-        "B2B-Anfrage: MFH mit 24 Wohneinheiten in Hofstede. Wir benötigen einen E-Check nach DGUV V3 inkl. Prüfprotokoll für die Versicherung. Bitte Angebot.",
-      adresse: "Hofsteder Str., 44809 Bochum",
-      stadtteil: "Hofstede",
+        "B2B-Anfrage: MFH mit 24 Wohneinheiten in Hülsdonk. Wir prüfen eine PV-Großanlage mit Mieterstrom-Modell und benötigen einen E-Check nach DGUV V3 inkl. Prüfprotokoll für die Versicherung. Bitte Angebot.",
+      adresse: "Hülsdonker Str., 47445 Moers",
+      stadtteil: "Hülsdonk",
       notizen:
-        "Anfrage gestern Mittag, Tina hat Eckdaten erfasst — Festpreis-Angebot kommt heute Nachmittag raus.",
+        "Anfrage gestern Mittag, Eckdaten erfasst — Festpreis-Angebot kommt heute Nachmittag raus.",
     },
     {
       id: "lead-004",
@@ -106,14 +106,14 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 1 * HOUR),
       status: "neu",
       name: "Frau Yıldız",
-      telefon: "0234 9988776",
+      telefon: "02841 9988776",
       anliegen:
-        "Hallo!! Steckdose im Wohnzimmer kaputt, Funken beim Stecker rein. Können Sie heute noch kommen?? Ist das gefährlich?",
-      stadtteil: "Riemke",
+        "Hallo!! Wechselrichter unserer PV-Anlage zeigt Fehler F23, kein Ertrag mehr. Anlage ist 7 Jahre alt. Können Sie kurzfristig vorbeischauen??",
+      stadtteil: "Schwafheim",
       kiVorschlaege: [
         {
           typ: "whatsapp",
-          text: "Hallo Frau Yıldız, das klingt nach einem Sicherungs-Problem — bitte die Sicherung sofort rausdrehen und den Stecker NICHT mehr verwenden. Ich schicke gleich einen Kollegen vorbei (zwischen 14 und 16 Uhr in Riemke). Ruf Sie jetzt einmal kurz an.",
+          text: "Hallo Frau Yıldız, F23 ist meist ein Isolations-Fehler — das prüfen wir mit Messgerät vor Ort. Wir kommen morgen zwischen 14 und 16 Uhr nach Schwafheim. Wir rufen Sie jetzt einmal kurz an, um die Eckdaten aufzunehmen.",
           confidence: 0.92,
         },
       ],
@@ -124,23 +124,23 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 6 * DAY),
       status: "abgeschlossen",
       name: "Dr. Markus Weber",
-      telefon: "0234 1122334",
+      telefon: "02841 1122334",
       email: "m.weber@example.de",
       anliegen:
-        "Suche Beratung zu KNX-Smart-Home in einem Neubau in Querenburg. Beleuchtung, Beschattung, Heizung — alles über einen Bus.",
-      adresse: "44801 Bochum",
-      stadtteil: "Querenburg",
+        "Suche Beratung zu PV + Speicher + Smart-Home-Anbindung in einem Neubau in Kapellen. KNX gewünscht – Energie-Monitoring soll integriert sein.",
+      adresse: "47445 Moers",
+      stadtteil: "Kapellen",
       chatVerlauf: [
         {
-          user: "Welche Smart-Home-Systeme empfehlen Sie für Neubauten?",
-          bot: "Wir setzen vorrangig auf KNX — herstellerunabhängig, langlebig, und durch Elektriker wartbar. Loxone ist die Alternative, falls Sie eine zentrale Visualisierung wollen.",
+          user: "Welche Smart-Home-Systeme empfehlen Sie für PV-Neubauten?",
+          bot: "Wir setzen vorrangig auf KNX — herstellerunabhängig, langlebig, durch Elektriker wartbar. Für reines Energie-Monitoring reicht oft auch der Wechselrichter (SMA, Fronius) plus App.",
         },
         {
           user: "Können Sie das vor Ort planen?",
-          bot: "Ja, kostenfreier Vor-Ort-Termin mit unserem KNX-Spezialisten. Tina meldet sich für Terminabsprache.",
+          bot: "Ja, kostenfreier Vor-Ort-Termin durch Andreas Mellies persönlich. Wir melden uns für Terminabsprache.",
         },
       ],
-      notizen: "Termin am 28.04. 14 Uhr eingebucht — Tina",
+      notizen: "Termin am 28.04. 14 Uhr eingebucht — Mellies",
       bearbeiteUm: iso(now, 5 * DAY),
     },
     {
@@ -149,12 +149,12 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 5 * DAY),
       status: "abgeschlossen",
       name: "Familie Krause",
-      telefon: "0234 3344556",
-      email: "krause.bochum@example.de",
+      telefon: "02841 3344556",
+      email: "krause.moers@example.de",
       anliegen:
-        "PV-Anlage 8 kWp gewünscht, Süddach, EFH in Wattenscheid. Bitte Festpreis-Angebot.",
-      adresse: "44869 Bochum",
-      stadtteil: "Wattenscheid",
+        "PV-Anlage 8 kWp gewünscht, Süddach, EFH in Vinn. Bitte Festpreis-Angebot.",
+      adresse: "47445 Moers",
+      stadtteil: "Vinn",
       notizen: "Auftrag erteilt 15.300€ — Installation in KW 21 geplant.",
       bearbeiteUm: iso(now, 4 * DAY),
     },
@@ -164,12 +164,12 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 1 * DAY + 8 * HOUR),
       status: "neu",
       name: "Familie Hartmann",
-      telefon: "0234 7766554",
+      telefon: "02841 7766554",
       email: "hartmann.efh@example.de",
       anliegen:
         "Großes Dach (130 m²), Berechnung ergab 24 kWp. Wir interessieren uns für PV + Speicher + Wallbox als Gesamtpaket. Förder-Beratung erwünscht.",
-      adresse: "44879 Bochum",
-      stadtteil: "Linden",
+      adresse: "47445 Moers",
+      stadtteil: "Repelen",
       pvBerechnung: {
         kwp: 24,
         investition: 33600,
@@ -183,18 +183,18 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 1 * DAY + 3 * HOUR),
       status: "in-bearbeitung",
       name: "Herr Köhler",
-      telefon: "0234 5566778",
+      telefon: "02841 5566778",
       anliegen:
-        "Sicherungskasten ist von 1978, Versicherung verlangt Erneuerung. EFH in Riemke. Können Sie ein Angebot machen?",
-      stadtteil: "Riemke",
+        "Bestehende PV-Anlage 6 kWp, Wechselrichter SMA SB5000 ist nach 11 Jahren ausgefallen. EFH in Meerbeck. Können Sie ein Angebot für den Tausch machen?",
+      stadtteil: "Meerbeck",
       kiVorschlaege: [
         {
           typ: "rueckruf-best",
-          text: "Rückruf-Vorschlag: morgen 9–11 Uhr.\n\nAufhänger: Versicherungs-Auflage Sicherungskasten-Erneuerung. Direkt Vor-Ort-Termin anbieten — Festpreis kommt nach Begehung. FI-Schutz und SLS-Schalter mit einplanen.",
+          text: "Rückruf-Vorschlag: morgen 9–11 Uhr.\n\nAufhänger: SMA SB5000, 11 Jahre alt — typischer Lebenszyklus, Tausch sinnvoll. Direkt Vor-Ort-Termin anbieten — Festpreis nach Begehung. Hybrid-Wechselrichter mit Speicher-Option mit anbieten (Förderung KfW 270 noch verfügbar).",
           confidence: 0.78,
         },
       ],
-      notizen: "Tina hat gestern WhatsApp beantwortet, Termin offen.",
+      notizen: "WhatsApp gestern beantwortet, Termin offen.",
     },
     {
       id: "lead-009",
@@ -202,12 +202,12 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 3 * HOUR),
       status: "neu",
       name: "Familie Petrov",
-      telefon: "0234 6677889",
-      email: "petrov.bochum@example.de",
+      telefon: "02841 6677889",
+      email: "petrov.moers@example.de",
       anliegen:
-        "Wir prüfen eine Wärmepumpe und brauchen Beratung zu BAFA-Förderung — auch für den E-Installationsanteil. EFH Weitmar.",
-      adresse: "44795 Bochum",
-      stadtteil: "Weitmar",
+        "Wir prüfen eine Wärmepumpe und brauchen Beratung zu BAFA-Förderung — auch für den E-Installationsanteil. EFH Asberg.",
+      adresse: "47445 Moers",
+      stadtteil: "Asberg",
       chatVerlauf: [
         {
           user: "Bekommen wir auf den Elektroteil der Wärmepumpe BAFA-Förderung?",
@@ -215,13 +215,13 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
         },
         {
           user: "Können Sie das gemeinsam planen?",
-          bot: "Sehr gerne. Tina aus unserem Büro meldet sich für einen Vor-Ort-Termin und stimmt mit Ihrem Heizungsbauer ab.",
+          bot: "Sehr gerne. Wir melden uns für einen Vor-Ort-Termin und stimmen mit Ihrem Heizungsbauer ab.",
         },
       ],
       kiVorschlaege: [
         {
           typ: "kurz-mail",
-          text: "Sehr geehrte Familie Petrov,\n\nvielen Dank für Ihre Anfrage zur Wärmepumpe. Den E-Installationsanteil rechnen wir gemeinsam mit Ihrem Heizungsbauer im BAFA-Förderantrag mit ab — typischerweise zwischen 30 und 70 % Bezuschussung.\n\nWir schlagen einen kostenfreien Vor-Ort-Termin in Weitmar vor — Tina ruft Sie morgen Vormittag an.\n\nFreundliche Grüße\nTina · Elektro Sternhoff GmbH",
+          text: "Sehr geehrte Familie Petrov,\n\nvielen Dank für Ihre Anfrage zur Wärmepumpe. Den E-Installationsanteil rechnen wir gemeinsam mit Ihrem Heizungsbauer im BAFA-Förderantrag mit ab — typischerweise zwischen 30 und 70 % Bezuschussung.\n\nWir schlagen einen kostenfreien Vor-Ort-Termin in Asberg vor — wir rufen Sie morgen Vormittag an.\n\nFreundliche Grüße\nSolaris PV · Andreas Mellies",
           confidence: 0.79,
         },
       ],
@@ -232,12 +232,12 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       eingangszeit: iso(now, 7 * DAY),
       status: "abgeschlossen",
       name: "Frau Schwerin",
-      telefon: "0234 2233445",
+      telefon: "02841 2233445",
       email: "schwerin@example.de",
       anliegen:
-        "Notdienst-Einsatz: Kompletter Stromausfall in der Wohnung. Konnte über Notdienst-Nummer einen Termin machen.",
-      stadtteil: "Mitte",
-      notizen: "Einsatz erfolgreich, Rechnung erstellt — Tina",
+        "Service-Einsatz: Ertragsabfall der PV-Anlage seit 2 Wochen. Konnte über die Service-Nummer einen Termin machen.",
+      stadtteil: "Hülsdonk",
+      notizen: "Einsatz erfolgreich — verschmutzte Module gereinigt, Rechnung erstellt.",
       bearbeiteUm: iso(now, 6 * DAY),
     },
   ];

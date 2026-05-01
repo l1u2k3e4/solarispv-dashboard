@@ -3,7 +3,7 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
 import Image from "next/image";
-import { FileText, ShieldCheck, Clock, Wallet, ArrowRight } from "lucide-react";
+import { Sun, ShieldCheck, Plug, Wallet, ArrowRight } from "lucide-react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -17,24 +17,24 @@ import { referenzen } from "@/lib/demo-data";
 
 const usps = [
   {
-    icon: FileText,
-    titel: "Rahmenverträge",
-    text: "Feste Konditionen, klare Reaktionszeiten, ein Ansprechpartner für Ihren gesamten Bestand.",
+    icon: Sun,
+    titel: "PV-Großanlagen für MFH",
+    text: "Photovoltaik auf Mehrfamilienhäusern und Gewerbedächern – ausgelegt vom Elektro-Meister, mit ehrlicher Hersteller-Empfehlung.",
+  },
+  {
+    icon: Plug,
+    titel: "Mieterstrom & Wallbox-Park",
+    text: "Mieterstrom-Konzepte für Wohngebäude, Wallbox-Parks für Tiefgaragen und Stellplätze – inklusive Lastmanagement.",
   },
   {
     icon: ShieldCheck,
-    titel: "DGUV V3 / E-Check",
-    text: "Versicherungsrelevante Prüfungen mit Plakette und Protokoll – termingerecht, dokumentiert.",
-  },
-  {
-    icon: Clock,
-    titel: "24/7-Notfall-SLA",
-    text: "Definierte Erreichbarkeit für Ihre Bestandsobjekte – Reaktionszeit nach Vereinbarung.",
+    titel: "E-Check für Wohngebäude",
+    text: "DGUV-V3-Prüfungen für Allgemein-Strom, Treppenhaus, Aufzug und TG – mit Protokoll für Versicherung und Eigentümerversammlung.",
   },
   {
     icon: Wallet,
-    titel: "Festpreise je MFH",
-    text: "Wartungs- und Sanierungspakete pro Mehrfamilienhaus statt unkalkulierbarer Stundensätze.",
+    titel: "Festpreise je Objekt",
+    text: "Klar kalkulierte Pakete pro MFH statt unkalkulierbarer Stundensätze – ein Ansprechpartner für Ihren gesamten Bestand.",
   },
 ];
 
@@ -82,18 +82,18 @@ export default function B2BHausverwaltungenPage() {
                 B2B · Hausverwaltungen
               </p>
               <h1 className="mt-3 text-balance text-3xl leading-tight sm:text-4xl lg:text-5xl">
-                Elektrohandwerk für Hausverwaltungen im Ruhrgebiet
+                Photovoltaik für Mehrfamilienhäuser am Niederrhein
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
-                Ein Ansprechpartner für Ihren gesamten Bestand. Rahmenverträge,
-                E-Check, Notfall-SLA – aus Bochum und Castrop-Rauxel.
+                Mieterstrom, Wallbox-Park, E-Check und PV-Großanlagen – vom
+                Elektro-Meisterbetrieb in Moers.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild variant="accent" size="lg">
                   <a href="#anfrage">Rahmenvertrag anfragen</a>
                 </Button>
                 <Button asChild variant="outline-white" size="lg">
-                  <a href="tel:+4923492339560">Direkt anrufen</a>
+                  <a href="tel:+4928418163727">Direkt anrufen</a>
                 </Button>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function B2BHausverwaltungenPage() {
                 />
               </div>
               <p className="mt-3 text-sm italic text-white/80">
-                Echter Standort, echte Substanz – Bessemerstraße 80, Bochum.
+                Echter Standort, echte Substanz – Grünbergstr. 39a, 47445 Moers.
               </p>
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function B2BHausverwaltungenPage() {
               </Button>
 
               <p className="mt-4 text-xs text-muted-foreground">
-                Demo: Im Live-Betrieb wird die Anfrage an Sternhoff gesendet.
+                Demo: Im Live-Betrieb wird die Anfrage an Solaris PV gesendet.
               </p>
             </form>
           </div>
@@ -289,7 +289,7 @@ export default function B2BHausverwaltungenPage() {
       <Toast
         open={toastOpen}
         onClose={() => setToastOpen(false)}
-        message="Demo: Im Live-Betrieb wird die Anfrage an Sternhoff gesendet."
+        message="Demo: Im Live-Betrieb wird die Anfrage an Solaris PV gesendet."
       />
     </>
   );

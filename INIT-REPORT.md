@@ -1,4 +1,7 @@
-# Prompt 8 — Website-Init: Abschluss-Bericht
+> ⚠️ **HISTORISCHER STAND** — diese Datei stammt aus dem Sternhoff-Build vor dem Solaris-PV-Fork.
+> Aktueller Solaris-PV-Stand: PROJEKTPLAN.md + CLAUDE.md.
+
+# Prompt 8 — Website-Init: Abschluss-Bericht (HISTORISCH, Sternhoff-Vorlage)
 
 **Datum:** 2026-04-27
 **Stand:** Init abgeschlossen, Build grün, erster Git-Commit gemacht.

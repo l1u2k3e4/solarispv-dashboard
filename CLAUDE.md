@@ -9,16 +9,29 @@
 
 ## 1. Projektidentität
 
-**Kunde:** Solaris PV (Andreas Mellies)
-**Inhaber:** Andreas Mellies (Gründer, alleinverantwortlich — Einzelunternehmer / e.K. / GmbH ❓ TODO P10 verifizieren)
-**Bürostandort (Marketing- + SEO-NAP):** Grünbergstr. 39a, 47445 Moers
-**Sitz Impressum:** Birkenstr. 12, 47447 Moers
-**Telefon:** ❓ TODO P10 (Platzhalter `+49 2841 ____` in `src/lib/seo/schema.ts`)
-**E-Mail:** `info@solarispv.de` (zu verifizieren)
+**Kunde:** Solaris PV (SolarisPV® Inh. Andreas Mellies)
+**Inhaber:** Andreas Mellies (Gründer, alleinverantwortlich — vermutlich Einzelunternehmen, Rechtsform ❓ Mellies bestätigen, siehe `~/Documents/Jobs/SolarisPv/_offene-fragen.md` B2)
+**Berufsbezeichnung:** Elektro-Meister (Elektrotechniker-Handwerk, verliehen in Deutschland)
+**Bürostandort (Marketing- + SEO-NAP):** Grünbergstr. 39a, 47445 Moers (Stadtteil Genend/Rheinkamp; Geo: 51.4726644, 6.6039919)
+**Sitz Impressum:** Birkenstraße 12, 47447 Moers (Stadtteil Vennikel/Kapellen; Geo: 51.3991704, 6.6272079)
+**Telefon:** +49 2841 816 37 27 (E.164: `+4928418163727`) — verifiziert via Impressum
+**Telefax:** +49 2841 816 37 28
+**E-Mail:** `energie@solarispv.de` — verifiziert via Impressum + Footer + Datenschutz
+**USt-IdNr.:** DE216715857 — verifiziert via Impressum
 **Live-URL (alt):** https://www.solarispv.de/
 **Impressum (NAP-Quelle):** https://www.solarispv.de/impressum/
-**HRB / HWK / USt-IdNr:** ❓ TODO P10 (mit Mellies klären)
-**Service-Region:** Moers, Krefeld, Duisburg, gesamter Niederrhein
+**Service-Region:** 30-km-Radius Moers — Moers, Neukirchen-Vluyn, Kamp-Lintfort, Rheinberg, Voerde, Duisburg, Krefeld, Dinslaken, Niederrhein
+
+### BLOCKER vor Live-Gang (Pflichtangaben Impressum + DS)
+
+Aktuell **fehlen** in `src/app/impressum/page.tsx` (mit Platzhalter-Hinweis):
+1. **Berufshaftpflicht** (Versicherer + Sitz + Geltungsbereich) — § 5 TMG / § 11 DL-InfoV
+2. **Rechtsform + ggf. HRB-Nummer** — Einzelunternehmen vs. e.K. mit Mellies klären
+3. **Innung** (vermutlich Innung Niederrhein, Sitz Krefeld) und **HWK Düsseldorf** als Aufsichtsbehörde verifizieren
+4. **Datenschutzerklärung** muss vor Live-Gang um Cookie-Banner, Calendly, Resend, Sanity, Vercel, ggf. n8n/Pinecone/WhatsApp erweitert werden — am besten via datenschutz-generator.de (Dr. Schwenke)
+
+Vollständige Liste + Status: `~/Documents/Jobs/SolarisPv/_offene-fragen.md` (B1–B5).
+Stammdaten-Tabelle: `~/Documents/Jobs/SolarisPv/_solaris-stammdaten.md`.
 
 **Projektziel:** Komplette Neuentwicklung der Website mit Fokus auf:
 1. Lokale Marktführer-SEO für **Moers + Niederrhein** (Wettbewerb: TASK-FORCE SolarEnergy, Gebrüder Queitsch, Cellix Energy — siehe `analyse/04-konkurrenz-tief/`)
@@ -269,5 +282,5 @@ Andreas Mellies pflegt die Website-Inhalte NICHT selbst. Luke / die Agentur ist 
 
 ---
 
-**Letzte Änderung:** 2026-05-01 (Prompt 09 — Branding-Migration aus Logo)
+**Letzte Änderung:** 2026-05-01 (Prompt 10 — Content-Migration: Stammdaten verifiziert, Footer/Header/Sektionen Solaris, Impressum + Datenschutz angelegt, SEO-Schema-TODOs befüllt, P1-Standortseiten + PROJEKTPLAN aktualisiert)
 **Verantwortlich:** Luke Kozik

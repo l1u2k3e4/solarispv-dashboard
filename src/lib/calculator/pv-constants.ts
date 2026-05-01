@@ -7,7 +7,7 @@
  * - Investitionskosten: Solaranlagen-Portal, gruenes.haus, 1komma5
  * - KfW 270: kfw.de/inlandsfoerderung/Privatpersonen
  * - NRW Förderung: metergrid.de, ennergy.de — keine landesweiten Zuschüsse für EFH 2026
- * - Jahresertrag NRW: PVGIS-Mittelwert 900–1.000 kWh/kWp
+ * - Jahresertrag NRW/Niederrhein: PVGIS + DWD-Strahlungsdaten 1991–2020, 950–1.050 kWh/kWp
  */
 
 export const PV_CONSTANTS_2026 = {
@@ -21,7 +21,7 @@ export const PV_CONSTANTS_2026 = {
   // Strompreis Eigenverbrauch in €/kWh (Mittelwert NEU + BESTAND April 2026)
   strompreisEigenverbrauch: 0.30,
 
-  // Jahresertrag pro kWp in kWh — Mittelwert NRW/Bochum (PVGIS)
+  // Jahresertrag pro kWp in kWh — Mittelwert NRW/Niederrhein (PVGIS, DWD-Strahlungsdaten 1991–2020)
   jahresertragProKwp: 950,
 
   // Faustformel: kWp pro m² Dachfläche (modernes Modul ~400–450 W auf ~2 m²)

@@ -13,19 +13,19 @@ export function LokalePraesenz() {
             Lokal verankert
           </p>
           <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
-            Wir sind in Bochum zuhause.
+            Wir sind in Moers zuhause.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Hauptsitz Bessemerstraße 80 in Bochum, Filiale in Castrop-Rauxel.
-            Vom Altbau in Linden bis zum Mehrfamilienhaus in Wattenscheid – wir
-            kennen die Häuser im Pott.
+            Bürostandort Grünbergstr. 39a in Moers — wir bauen am gesamten
+            Niederrhein. Vom Einfamilienhaus in Repelen bis zur Gewerbedach-Anlage
+            in Kamp-Lintfort: Andreas Mellies plant jede Anlage persönlich.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl">Bochum-Stadtteile, in denen wir tagtäglich arbeiten:</h3>
+              <h3 className="text-xl">Moers-Stadtteile, in denen wir tagtäglich arbeiten:</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {stadtteile.map((tag) => (
                   <li
@@ -39,7 +39,7 @@ export function LokalePraesenz() {
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
-              {[standorte.hauptsitz, standorte.filiale].map((s) => (
+              {[standorte.hauptsitz].map((s) => (
                 <div
                   key={s.name}
                   className="rounded-lg border border-border bg-white p-5"
@@ -59,6 +59,21 @@ export function LokalePraesenz() {
                   </p>
                 </div>
               ))}
+              <div className="rounded-lg border border-border bg-white p-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
+                  Service-Region
+                </p>
+                <p className="mt-1 text-lg font-bold text-navy-500">
+                  30-km-Radius Niederrhein
+                </p>
+                <p className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
+                  <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-solaris-700" aria-hidden="true" />
+                  <span>
+                    Moers · Neukirchen-Vluyn · Kamp-Lintfort ·<br />
+                    Rheinberg · Voerde · Duisburg · Krefeld
+                  </span>
+                </p>
+              </div>
             </div>
 
             <ImagePlaceholder
@@ -79,7 +94,7 @@ export function LokalePraesenz() {
               />
             </div>
             <p className="mt-3 text-sm italic text-muted-foreground">
-              Hier finden Sie uns – Bessemerstr. 80, 44793 Bochum.
+              Hier finden Sie uns – Grünbergstr. 39a, 47445 Moers.
             </p>
           </div>
         </div>

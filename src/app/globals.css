@@ -39,7 +39,7 @@
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 28 97% 48%;                 /* solaris-500 focus ring */
-    --radius: 0.625rem;                 /* 10px — slightly softer than sternhoff */
+    --radius: 0.625rem;                 /* 10px — leicht weicher als Bootstrap-Default */
 
     /* ── CSS-Var fallbacks (used by shadows / inline style) ─────── */
     --color-primary:        #f47603;
