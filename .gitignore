@@ -46,3 +46,6 @@ sanity/dist
 # IDE
 .idea
 .vscode
+
+# Asset-Migration backups (Prompt 08)
+public-*-backup-*/

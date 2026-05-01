@@ -8,8 +8,8 @@ export function InhaberStatement() {
           <div className="lg:col-span-5">
             <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-xl shadow-xl">
               <Image
-                src="/images/PHOTO-2018-07-10-11-25-40.jpg"
-                alt="Gerhard Sternhoff, Geschäftsführer und Elektromeister, in unserem Bochumer Büro"
+                src="/images/team/andreas-mellies.jpg"
+                alt="Andreas Mellies, Inhaber und Photovoltaik-Spezialist von Solaris PV"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

@@ -13,11 +13,11 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Image
-              src="/images/logo-sternhoff.png"
-              alt="Elektro Sternhoff"
+              src="/images/logo-solaris-pv-white.png"
+              alt="Solaris PV"
               width={200}
-              height={44}
-              className="h-10 w-auto brightness-0 invert"
+              height={66}
+              className="h-10 w-auto"
             />
             <p className="mt-4 text-sm leading-relaxed text-white/80">
               Elektromeisterbetrieb in Bochum. Seit Jahrzehnten zuverlässig vor Ort

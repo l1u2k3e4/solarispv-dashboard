@@ -68,8 +68,8 @@ export function HeroSection() {
           <div className="order-1 lg:order-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 lg:aspect-[5/4]">
               <Image
-                src="/images/PHOTO-2018-10-23-15-44-06.jpg"
-                alt="Sternhoff-Servicefahrzeug vor unserer Werkstatt in Bochum-Stahlhausen"
+                src="/images/hero/pv-anlage-hero.jpg"
+                alt="Solaris-PV-Anlage am Niederrhein – Drohnenaufnahme einer fertigen Photovoltaik-Installation"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

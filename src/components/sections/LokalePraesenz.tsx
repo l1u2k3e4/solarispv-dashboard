@@ -71,8 +71,8 @@ export function LokalePraesenz() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl">
               <Image
-                src="/images/PHOTO-2018-07-02-16-38-30.jpg"
-                alt="Adressschild Bessemerstraße 80 vor unserer Bochumer Werkstatt"
+                src="/images/lokal/pv-region-niederrhein.jpg"
+                alt="Photovoltaik-Anlage in der Region Niederrhein – installiert von Solaris PV aus Moers"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

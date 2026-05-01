@@ -100,8 +100,8 @@ export default function B2BHausverwaltungenPage() {
             <div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/10">
                 <Image
-                  src="/images/IMG_4644.jpeg"
-                  alt="Werkstatt-Außenfassade Sternhoff Meisterbetrieb in Bochum"
+                  src="/images/b2b/pv-grossanlage.jpg"
+                  alt="Großflächige Photovoltaik-Anlage auf einem Mehrfamilienhaus – installiert von Solaris PV"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"

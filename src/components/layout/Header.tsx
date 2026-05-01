@@ -31,10 +31,10 @@ export function Header() {
       <div className="container-wide flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link href="/" className="flex items-center" aria-label="Elektro Sternhoff – Startseite">
           <Image
-            src="/images/logo-sternhoff.png"
-            alt="Elektro Sternhoff – Elektromeisterbetrieb in Bochum"
+            src="/images/logo-solaris-pv.png"
+            alt="Solaris PV – Photovoltaik aus Moers"
             width={200}
-            height={44}
+            height={66}
             priority
             className="h-9 w-auto lg:h-11"
           />

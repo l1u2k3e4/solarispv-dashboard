@@ -8,7 +8,7 @@ export function NotdienstBlock() {
   return (
     <section id="notdienst" className="relative overflow-hidden bg-sternhoff-accent text-white">
       <Image
-        src="/images/PHOTO-2018-10-23-15-44-22.jpg"
+        src="/images/hero/pv-anlage-hero.jpg"
         alt=""
         fill
         sizes="100vw"

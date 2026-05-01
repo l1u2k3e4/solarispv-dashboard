@@ -58,10 +58,10 @@ export function Sidebar({
     >
       <div className="mb-6 flex items-center justify-center rounded-md bg-white p-3">
         <Image
-          src="/Elektro-Sternhoff-Logo.jpg"
-          alt="Elektro Sternhoff"
+          src="/images/logo-solaris-pv.png"
+          alt="Solaris PV"
           width={140}
-          height={30}
+          height={46}
           className="h-auto w-[140px]"
           priority
         />
