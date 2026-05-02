@@ -6,7 +6,6 @@ import {
   brand,
   kontakt,
   oeffnungszeiten,
-  services,
   standorte,
 } from "@/lib/demo-data";
 
@@ -17,49 +16,13 @@ export function Footer() {
     <footer className="bg-navy-500 text-navy-100">
       <div className="container-wide py-14 lg:py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Spalte 1 — Brand + NAP */}
           <div>
             <Logo variant="white" withLink={false} className="h-10 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-navy-200">
               {brand.shortDescription}
             </p>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
-              Leistungen
-            </h3>
-            <ul className="space-y-2 text-sm text-navy-200">
-              {services.map((service) => (
-                <li key={service.slug}>
-                  <Link
-                    className="hover:text-solaris-300"
-                    href={`/leistungen/${service.slug}`}
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2">
-                <Link
-                  className="hover:text-solaris-300"
-                  href="/foerderung-photovoltaik-2026"
-                >
-                  Förderung 2026
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-solaris-300" href="/partner">
-                  Unsere Partner
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
-              Bürostandort
-            </h3>
-            <div className="space-y-3 text-sm text-navy-200">
+            <div className="mt-6 space-y-3 text-sm text-navy-200">
               <p className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" aria-hidden="true" />
                 <span>
@@ -90,6 +53,61 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Spalte 2 — Leistungen (max 6) */}
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
+              Leistungen
+            </h3>
+            <ul className="space-y-2 text-sm text-navy-200">
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/leistungen/photovoltaik"
+                >
+                  Photovoltaik
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/leistungen/stromspeicher"
+                >
+                  Stromspeicher
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/leistungen/wallbox"
+                >
+                  Wallbox
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/leistungen/waermepumpe"
+                >
+                  Wärmepumpe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/foerderung-photovoltaik-2026"
+                >
+                  Förderung 2026
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-solaris-300" href="/so-laeuft-es">
+                  So läuft&apos;s
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Spalte 3 — Standorte (6, identisch zu sitemap.ts) */}
           <div>
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
               Standorte am Niederrhein
@@ -100,7 +118,7 @@ export function Footer() {
                   className="hover:text-solaris-300"
                   href="/photovoltaik/moers"
                 >
-                  Photovoltaik Moers
+                  Moers
                 </Link>
               </li>
               <li>
@@ -140,15 +158,44 @@ export function Footer() {
                   className="hover:text-solaris-300"
                   href="/photovoltaik/niederrhein"
                 >
-                  Niederrhein-Übersicht
+                  Niederrhein-Hub
                 </Link>
               </li>
             </ul>
+          </div>
 
-            <h3 className="mt-8 mb-4 text-sm font-bold uppercase tracking-wider text-white">
-              Rechtliches
+          {/* Spalte 4 — Rechtliches + Unternehmen */}
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
+              Unternehmen
             </h3>
             <ul className="space-y-2 text-sm text-navy-200">
+              <li>
+                <Link className="hover:text-solaris-300" href="/partner">
+                  Unsere Partner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/rechner/photovoltaik"
+                >
+                  PV-Rechner
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-solaris-300" href="/notdienst">
+                  Notdienst (B2B)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-solaris-300"
+                  href="/b2b/hausverwaltungen"
+                >
+                  Hausverwaltungen
+                </Link>
+              </li>
               <li>
                 <Link className="hover:text-solaris-300" href="/impressum">
                   Impressum

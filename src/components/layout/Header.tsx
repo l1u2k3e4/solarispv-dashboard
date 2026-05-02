@@ -15,13 +15,15 @@ import {
 } from "@/components/ui/sheet";
 import { kontakt } from "@/lib/demo-data";
 
+// Konsolidiert (P16): max 5 Nav-Items + 1 CTA, klare Hierarchie.
+// "Leistungen" deeplinkt direkt auf den Photovoltaik-Service (Hauptangebot);
+// die ServiceGrid-Section auf der Home hat zusätzlich `id="leistungen"`.
 const navItems = [
-  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/leistungen/photovoltaik", label: "Leistungen" },
   { href: "/partner", label: "Partner" },
   { href: "/photovoltaik/moers", label: "Standorte" },
-  { href: "/foerderung-photovoltaik-2026", label: "Förderung 2026" },
-  { href: "/rechner/photovoltaik", label: "PV-Rechner" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/foerderung-photovoltaik-2026", label: "Förderung" },
+  { href: "/so-laeuft-es", label: "So läuft's" },
 ];
 
 export function Header() {

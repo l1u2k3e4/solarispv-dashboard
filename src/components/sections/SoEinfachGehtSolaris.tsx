@@ -15,7 +15,7 @@ const steps = [
       "Direkter Draht zu Andreas Mellies",
       "Verständlich erklärt — kein Fachchinesisch",
     ],
-    cta: { label: "Mehr zur Beratung", href: "/leistungen/beratung" },
+    cta: { label: "Mehr zur Beratung", href: "/so-laeuft-es#beratung" },
   },
   {
     number: "02",
@@ -27,7 +27,7 @@ const steps = [
       "Zukunftsfähige Komponentenwahl",
       "Förderung berechnet & dokumentiert",
     ],
-    cta: { label: "Beispiel-Angebot ansehen", href: "/leistungen/angebot" },
+    cta: { label: "Beispiel-Angebot ansehen", href: "/so-laeuft-es#angebot" },
   },
   {
     number: "03",
@@ -39,7 +39,7 @@ const steps = [
       "Effiziente, saubere Arbeit",
       "Inbetriebnahme + Anmeldung beim Netzbetreiber inklusive",
     ],
-    cta: { label: "Montage-Ablauf", href: "/leistungen/montage" },
+    cta: { label: "Montage-Ablauf", href: "/so-laeuft-es#montage" },
   },
 ];
 
