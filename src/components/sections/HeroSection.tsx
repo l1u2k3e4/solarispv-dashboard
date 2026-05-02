@@ -85,7 +85,7 @@ export function HeroSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 lg:aspect-[5/4]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/10 lg:aspect-[5/4]">
               <Image
                 src="/images/hero/pv-anlage-hero.jpg"
                 alt="Solaris-PV-Anlage am Niederrhein – Drohnenaufnahme einer fertigen Photovoltaik-Installation"

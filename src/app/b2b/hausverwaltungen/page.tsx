@@ -126,9 +126,9 @@ export default function B2BHausverwaltungenPage() {
                 return (
                   <div
                     key={u.titel}
-                    className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
+                    className="rounded-lg border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-solaris-50 text-solaris-700">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-md bg-solaris-50 text-solaris-700">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
                     <h3 className="mt-4 text-lg leading-snug">{u.titel}</h3>
@@ -151,7 +151,7 @@ export default function B2BHausverwaltungenPage() {
               {ablauf.map((step) => (
                 <li
                   key={step.nr}
-                  className="rounded-xl bg-white p-6 shadow-sm"
+                  className="rounded-lg bg-white p-6 shadow-sm"
                 >
                   <span className="text-3xl font-bold text-solaris-700">
                     {step.nr}
@@ -177,7 +177,7 @@ export default function B2BHausverwaltungenPage() {
               {referenzen.map((r) => (
                 <div
                   key={r.titel}
-                  className="rounded-xl border border-border bg-white p-5"
+                  className="rounded-lg border border-border bg-white p-5"
                 >
                   <ImagePlaceholder
                     label="Projektfoto folgt"
@@ -218,7 +218,7 @@ export default function B2BHausverwaltungenPage() {
 
             <form
               onSubmit={handleSubmit}
-              className="mt-10 rounded-2xl bg-white p-6 text-foreground shadow-2xl sm:p-10"
+              className="mt-10 rounded-xl bg-white p-6 text-foreground shadow-2xl sm:p-10"
               noValidate
             >
               <div className="grid gap-4 sm:grid-cols-2">

@@ -39,7 +39,8 @@
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 28 97% 48%;                 /* solaris-500 focus ring */
-    --radius: 0.625rem;                 /* 10px — leicht weicher als Bootstrap-Default */
+    --radius: 0.25rem;                  /* 4px — handwerklich-eckig (vorher 0.625rem / 10px) */
+    --radius-pill: 9999px;              /* explizit für Pill-Elemente: Status-Badges, Stadt-Chips */
 
     /* ── CSS-Var fallbacks (used by shadows / inline style) ─────── */
     --color-primary:        #f47603;

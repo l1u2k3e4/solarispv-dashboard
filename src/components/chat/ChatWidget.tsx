@@ -187,7 +187,7 @@ export function ChatWidget() {
               key={`u-${index}`}
               className="flex justify-end"
             >
-              <div className="max-w-[80%] rounded-2xl rounded-br-sm bg-primary px-4 py-2 text-primary-foreground shadow-sm">
+              <div className="max-w-[80%] rounded-lg rounded-br-sm bg-primary px-4 py-2 text-primary-foreground shadow-sm">
                 <p className="whitespace-pre-wrap break-words text-sm leading-relaxed">
                   {message.text}
                 </p>
@@ -207,7 +207,7 @@ export function ChatWidget() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="max-w-[80%] rounded-2xl rounded-bl-sm border border-slate-200 bg-white px-4 py-2 text-sm leading-relaxed text-foreground shadow-sm">
+            <div className="max-w-[80%] rounded-lg rounded-bl-sm border border-slate-200 bg-white px-4 py-2 text-sm leading-relaxed text-foreground shadow-sm">
               {message.loading ? (
                 <span
                   className="inline-flex items-center gap-1"
@@ -236,7 +236,7 @@ export function ChatWidget() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-white shadow-2xl lg:inset-auto lg:bottom-6 lg:right-6 lg:h-[600px] lg:max-h-[80vh] lg:w-[380px] lg:overflow-hidden lg:rounded-2xl"
+      className="fixed inset-0 z-50 flex flex-col bg-white shadow-2xl lg:inset-auto lg:bottom-6 lg:right-6 lg:h-[600px] lg:max-h-[80vh] lg:w-[380px] lg:overflow-hidden lg:rounded-lg"
       role="dialog"
       aria-modal="true"
       aria-label="Chatbot Solaris PV"
@@ -292,14 +292,14 @@ export function ChatWidget() {
           placeholder="Stellen Sie Ihre Frage..."
           aria-label="Nachricht an den Chatbot"
           rows={1}
-          className="flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm leading-relaxed text-foreground outline-none transition-colors focus:border-solaris-500 focus:ring-1 focus:ring-solaris-500"
+          className="flex-1 resize-none rounded-md border border-slate-200 bg-white px-3 py-2 text-sm leading-relaxed text-foreground outline-none transition-colors focus:border-solaris-500 focus:ring-1 focus:ring-solaris-500"
           disabled={isSending}
         />
         <button
           type="submit"
           disabled={!input.trim() || isSending}
           aria-label="Nachricht senden"
-          className="flex shrink-0 items-center justify-center rounded-xl bg-primary p-3 text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex shrink-0 items-center justify-center rounded-md bg-primary p-3 text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Send className="h-5 w-5" />
         </button>

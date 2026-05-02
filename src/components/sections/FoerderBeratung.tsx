@@ -61,7 +61,7 @@ export function FoerderBeratung() {
                 key={p.titel}
                 className="flex items-start gap-3 rounded-lg border border-border bg-white p-5"
               >
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-solaris-50 text-solaris-700">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-solaris-50 text-solaris-700">
                   <Sparkles className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
@@ -76,7 +76,7 @@ export function FoerderBeratung() {
 
           <form
             onSubmit={handleSubmit}
-            className="rounded-xl border border-border bg-white p-6 shadow-sm sm:p-8 lg:col-span-3"
+            className="rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8 lg:col-span-3"
             noValidate
           >
             <p className="text-lg font-bold text-navy-500">
@@ -136,7 +136,7 @@ export function FoerderBeratung() {
                 required
                 checked={form.dsgvo}
                 onChange={(e) => setForm({ ...form, dsgvo: e.target.checked })}
-                className="mt-1 h-4 w-4 rounded border-input text-solaris-500 focus:ring-2 focus:ring-solaris-200"
+                className="mt-1 h-4 w-4 rounded-sm border-input text-solaris-500 focus:ring-2 focus:ring-solaris-500/40"
               />
               <span>
                 Ich willige ein, dass Solaris PV (Andreas Mellies) meine Daten

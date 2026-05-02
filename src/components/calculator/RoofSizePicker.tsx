@@ -68,7 +68,7 @@ export function RoofSizePicker({ value, onChange }: Props) {
             onClick={() => onChange(size)}
             aria-pressed={isSelected}
             className={cn(
-              "relative flex flex-col overflow-hidden rounded-xl border-2 bg-white text-left transition-all",
+              "relative flex flex-col overflow-hidden rounded-lg border-2 bg-white text-left transition-all",
               "hover:-translate-y-0.5 hover:border-solaris-500 hover:shadow-md",
               "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
               isSelected

@@ -26,7 +26,7 @@ export function MobileStickyButtons() {
         <a
           href={kontakt.hauptsitz.telLink}
           aria-label="Solaris PV anrufen"
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary py-4 text-lg font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="flex flex-1 items-center justify-center gap-2 rounded-md bg-primary py-4 text-lg font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <Phone className="h-5 w-5" aria-hidden="true" />
           Jetzt anrufen
@@ -35,7 +35,7 @@ export function MobileStickyButtons() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Chatbot öffnen"
-          className="flex items-center justify-center rounded-xl bg-primary p-4 text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="flex items-center justify-center rounded-md bg-primary p-4 text-primary-foreground transition-colors hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <MessageSquare className="h-6 w-6" aria-hidden="true" />
         </button>

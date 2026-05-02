@@ -303,7 +303,7 @@ export default function StandortseitePage({ params }: RouteParams) {
         {/* -------------------------------------------------------------- */}
         <section className="bg-white py-16 lg:py-20">
           <div className="container-narrow">
-            <div className="rounded-2xl border-2 border-border bg-gray-50 p-6 sm:p-10">
+            <div className="rounded-xl border-2 border-border bg-gray-50 p-6 sm:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-solaris-700">
                 Was Photovoltaik {isHub ? "am Niederrhein" : `in ${standort.city}`} bei Solaris PV bedeutet
               </p>
@@ -335,7 +335,7 @@ export default function StandortseitePage({ params }: RouteParams) {
                   {REGION_STAEDTE.map((s) => (
                     <li
                       key={s.slug}
-                      className="rounded-xl border-2 border-border bg-white p-5 transition-colors hover:border-solaris-500"
+                      className="rounded-lg border-2 border-border bg-white p-5 transition-colors hover:border-solaris-500"
                     >
                       <Link
                         href={`/photovoltaik/${s.slug}/`}
@@ -360,13 +360,13 @@ export default function StandortseitePage({ params }: RouteParams) {
                     {stadtteile.map((teil) => (
                       <li
                         key={teil}
-                        className="rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-foreground"
+                        className="rounded-pill border border-border bg-white px-4 py-2 text-sm font-medium text-foreground"
                       >
                         {teil}
                       </li>
                     ))}
                     {standort.slug !== "moers" && (
-                      <li className="rounded-full border border-dashed border-border px-4 py-2 text-sm font-medium text-muted-foreground">
+                      <li className="rounded-pill border border-dashed border-border px-4 py-2 text-sm font-medium text-muted-foreground">
                         und weitere
                       </li>
                     )}
@@ -480,7 +480,7 @@ export default function StandortseitePage({ params }: RouteParams) {
             </p>
 
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              <li className="rounded-xl border-2 border-border bg-white p-5">
+              <li className="rounded-lg border-2 border-border bg-white p-5">
                 <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                   Premium-Modul
                 </p>
@@ -490,7 +490,7 @@ export default function StandortseitePage({ params }: RouteParams) {
                   Lebensdauer gefragt ist.
                 </p>
               </li>
-              <li className="rounded-xl border-2 border-border bg-white p-5">
+              <li className="rounded-lg border-2 border-border bg-white p-5">
                 <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                   Volumen-Modul (Mid-Range)
                 </p>
@@ -500,7 +500,7 @@ export default function StandortseitePage({ params }: RouteParams) {
                   vor Premium-Optik steht.
                 </p>
               </li>
-              <li className="rounded-xl border-2 border-border bg-white p-5">
+              <li className="rounded-lg border-2 border-border bg-white p-5">
                 <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                   Speicher + Energiemanager
                 </p>
@@ -510,7 +510,7 @@ export default function StandortseitePage({ params }: RouteParams) {
                   steuert alles aus einer Logik.
                 </p>
               </li>
-              <li className="rounded-xl border-2 border-border bg-white p-5">
+              <li className="rounded-lg border-2 border-border bg-white p-5">
                 <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                   Montagesystem
                 </p>
@@ -537,9 +537,9 @@ export default function StandortseitePage({ params }: RouteParams) {
         {/* -------------------------------------------------------------- */}
         <section className="bg-white py-16 lg:py-20">
           <div className="container-narrow">
-            <div className="rounded-2xl border-2 border-solaris-200 bg-solaris-50 p-6 sm:p-10">
+            <div className="rounded-xl border-2 border-solaris-200 bg-solaris-50 p-6 sm:p-10">
               <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div>
@@ -586,7 +586,7 @@ export default function StandortseitePage({ params }: RouteParams) {
               {faqItems.map((faq) => (
                 <div
                   key={faq.question}
-                  className="rounded-xl border-2 border-border bg-white p-6"
+                  className="rounded-lg border-2 border-border bg-white p-6"
                 >
                   <dt className="text-lg font-bold text-navy-500">
                     {faq.question}
@@ -616,7 +616,7 @@ export default function StandortseitePage({ params }: RouteParams) {
               {hubLink && (
                 <Link
                   href={hubLink}
-                  className="group rounded-xl border-2 border-solaris-500 bg-white p-5 transition-colors hover:bg-solaris-50"
+                  className="group rounded-lg border-2 border-solaris-500 bg-white p-5 transition-colors hover:bg-solaris-50"
                 >
                   <p className="text-xs font-bold uppercase tracking-wider text-solaris-700">
                     Region-Hub
@@ -638,7 +638,7 @@ export default function StandortseitePage({ params }: RouteParams) {
                 <Link
                   key={city.slug}
                   href={`/photovoltaik/${city.slug}/`}
-                  className="group rounded-xl border-2 border-border bg-white p-5 transition-colors hover:border-solaris-500"
+                  className="group rounded-lg border-2 border-border bg-white p-5 transition-colors hover:border-solaris-500"
                 >
                   <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     Standort

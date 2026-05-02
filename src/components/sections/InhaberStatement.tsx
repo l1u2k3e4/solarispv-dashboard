@@ -6,7 +6,7 @@ export function InhaberStatement() {
       <div className="container-wide">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-xl shadow-xl">
+            <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-md shadow-xl ring-1 ring-border">
               <Image
                 src="/images/team/andreas-mellies.jpg"
                 alt="Andreas Mellies, Inhaber und Photovoltaik-Spezialist von Solaris PV"

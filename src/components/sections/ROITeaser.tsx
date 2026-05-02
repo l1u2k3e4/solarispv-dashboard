@@ -7,9 +7,9 @@ export function ROITeaser() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-wide">
-        <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-gradient-to-br from-solaris-50 to-white p-8 sm:p-12 lg:p-16">
+        <div className="mx-auto max-w-4xl rounded-xl border border-border bg-gradient-to-br from-solaris-50 to-white p-8 sm:p-12 lg:p-16">
           <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:gap-12">
-            <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <Calculator className="h-8 w-8" aria-hidden="true" />
             </span>
 

@@ -57,7 +57,7 @@ export function KIVorschlagCard({
           </span>
           <span
             className={cn(
-              "inline-flex rounded-full px-2 py-0.5 text-xs font-bold",
+              "inline-flex rounded-pill px-2 py-0.5 text-xs font-bold",
               TYP_STYLE[vorschlag.typ]
             )}
           >

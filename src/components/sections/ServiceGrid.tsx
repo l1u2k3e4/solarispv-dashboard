@@ -26,7 +26,7 @@ export function ServiceGrid() {
                 key={service.slug}
                 href={href}
                 className={cn(
-                  "group relative flex flex-col rounded-xl border bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-solaris-300 hover:shadow-brand-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                  "group relative flex flex-col rounded-lg border bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-solaris-300 hover:shadow-brand-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                   service.highlight
                     ? "border-solaris-500 bg-solaris-50"
                     : "border-border"
@@ -34,7 +34,7 @@ export function ServiceGrid() {
               >
                 <span
                   className={cn(
-                    "mb-4 flex h-12 w-12 items-center justify-center rounded-lg",
+                    "mb-4 flex h-12 w-12 items-center justify-center rounded-md",
                     service.highlight
                       ? "bg-primary text-primary-foreground"
                       : "bg-solaris-50 text-solaris-700"

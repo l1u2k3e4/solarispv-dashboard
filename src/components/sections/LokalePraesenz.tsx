@@ -30,7 +30,7 @@ export function LokalePraesenz() {
                 {stadtteile.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded-full border border-solaris-200 bg-white px-4 py-1.5 text-sm font-bold text-solaris-700"
+                    className="rounded-pill border border-solaris-200 bg-white px-4 py-1.5 text-sm font-bold text-solaris-700"
                   >
                     {tag}
                   </li>
@@ -84,7 +84,7 @@ export function LokalePraesenz() {
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-xl">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md shadow-xl">
               <Image
                 src="/images/lokal/pv-region-niederrhein.jpg"
                 alt="Photovoltaik-Anlage in der Region Niederrhein – installiert von Solaris PV aus Moers"

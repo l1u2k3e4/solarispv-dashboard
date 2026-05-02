@@ -56,7 +56,7 @@ export default function NotdienstPage() {
                 auch für Anlagen, die nicht von uns installiert wurden.
               </p>
 
-              <div className="mx-auto mt-10 max-w-md rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mx-auto mt-10 max-w-md rounded-xl bg-white/10 p-6 backdrop-blur-sm">
                 <p className="flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-wider">
                   <Clock className="h-4 w-4" aria-hidden="true" />
                   Erreichbarkeit
@@ -100,7 +100,7 @@ export default function NotdienstPage() {
               {ablauf.map((step) => (
                 <li
                   key={step.nr}
-                  className="rounded-xl border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
+                  className="rounded-lg border-2 border-border bg-white p-6 transition-colors hover:border-solaris-500"
                 >
                   <span className="text-3xl font-bold text-solaris-700">
                     {step.nr}
@@ -117,9 +117,9 @@ export default function NotdienstPage() {
 
         <section className="bg-gray-50 py-16 lg:py-20">
           <div className="container-narrow">
-            <div className="rounded-2xl border border-border bg-white p-6 sm:p-10">
+            <div className="rounded-xl border border-border bg-white p-6 sm:p-10">
               <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-500">
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-navy-50 text-navy-500">
                   <Wrench className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div>

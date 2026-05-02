@@ -81,11 +81,14 @@ const config: Config = {
         heading: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-        xl: "calc(var(--radius) + 6px)",
-        "2xl": "calc(var(--radius) + 12px)",
+        none: "0",
+        sm: "calc(var(--radius) - 4px)",      // clamp 0 — bei --radius=4px ergibt 0
+        md: "calc(var(--radius) - 2px)",       // 2px — Inputs, Buttons, kleine Surfaces
+        DEFAULT: "var(--radius)",              // 4px — neuer Default für `rounded`
+        lg: "var(--radius)",                    // 4px — Default-Cards (handwerklich-eckig)
+        xl: "calc(var(--radius) + 6px)",       // 10px — große Cards, Hero-Frames
+        "2xl": "calc(var(--radius) + 12px)",   // 16px — sehr große Visual-Frames (sparsam)
+        pill: "var(--radius-pill)",             // 9999px — semantisch für Badges/Chips
       },
       boxShadow: {
         "brand-sm": "0 1px 2px 0 rgba(2, 21, 42, 0.05)",

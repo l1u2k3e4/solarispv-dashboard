@@ -54,7 +54,7 @@ export function LeadDetail({
           className
         )}
       >
-        <div className="max-w-sm rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center shadow-sm">
+        <div className="max-w-sm rounded-xl border border-dashed border-slate-300 bg-white p-8 text-center shadow-sm">
           <Coffee
             className="mx-auto h-10 w-10 text-navy-500"
             aria-hidden="true"
@@ -266,12 +266,12 @@ function ChatVerlaufBlock({
         {turns.map((turn, idx) => (
           <li key={idx} className="space-y-2">
             <div className="flex justify-end">
-              <p className="max-w-[85%] rounded-2xl rounded-br-sm bg-navy-500 px-3 py-2 text-sm leading-relaxed text-white">
+              <p className="max-w-[85%] rounded-lg rounded-br-sm bg-navy-500 px-3 py-2 text-sm leading-relaxed text-white">
                 {turn.user}
               </p>
             </div>
             <div className="flex justify-start">
-              <p className="max-w-[85%] rounded-2xl rounded-bl-sm bg-gray-50 px-3 py-2 text-sm leading-relaxed text-foreground">
+              <p className="max-w-[85%] rounded-lg rounded-bl-sm bg-gray-50 px-3 py-2 text-sm leading-relaxed text-foreground">
                 {turn.bot}
               </p>
             </div>
