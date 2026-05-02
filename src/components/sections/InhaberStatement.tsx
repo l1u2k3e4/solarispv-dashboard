@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function InhaberStatement() {
   return (
@@ -37,6 +39,15 @@ export function InhaberStatement() {
             <p className="mt-8 border-t border-border pt-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Elektro-Meisterbetrieb · 9 Hersteller-Partnerschaften ·
               30-km-Radius Moers
+            </p>
+            <p className="mt-3 text-sm">
+              <Link
+                href="/partner"
+                className="inline-flex items-center gap-1 font-bold text-solaris-700 hover:text-solaris-600"
+              >
+                Mehr zu unseren Hersteller-Partnern
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
             </p>
           </div>
         </div>

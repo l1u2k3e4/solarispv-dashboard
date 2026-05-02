@@ -6,6 +6,7 @@ import { MobileStickyButtons } from "@/components/layout/MobileStickyButtons";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
+import { SoEinfachGehtSolaris } from "@/components/sections/SoEinfachGehtSolaris";
 import { LokalePraesenz } from "@/components/sections/LokalePraesenz";
 import { InhaberStatement } from "@/components/sections/InhaberStatement";
 import { FoerderBeratung } from "@/components/sections/FoerderBeratung";
@@ -40,6 +41,7 @@ export default function HomePage() {
         <HeroSection />
         <TrustBar />
         <ServiceGrid />
+        <SoEinfachGehtSolaris />
         <LokalePraesenz />
         <InhaberStatement />
         <FoerderBeratung />

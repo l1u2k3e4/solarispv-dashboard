@@ -47,6 +47,11 @@ export function Footer() {
                   Förderung 2026
                 </Link>
               </li>
+              <li>
+                <Link className="hover:text-solaris-300" href="/partner">
+                  Unsere Partner
+                </Link>
+              </li>
             </ul>
           </div>
 

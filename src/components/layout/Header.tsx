@@ -17,6 +17,7 @@ import { kontakt } from "@/lib/demo-data";
 
 const navItems = [
   { href: "/#leistungen", label: "Leistungen" },
+  { href: "/partner", label: "Partner" },
   { href: "/photovoltaik/moers", label: "Standorte" },
   { href: "/foerderung-photovoltaik-2026", label: "Förderung 2026" },
   { href: "/rechner/photovoltaik", label: "PV-Rechner" },
