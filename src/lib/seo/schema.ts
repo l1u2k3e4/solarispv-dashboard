@@ -9,7 +9,7 @@ export const SITE_URL =
 const TELEPHONE = "+4928418163727"; // E.164 — Quelle: solarispv.de/impressum
 const EMAIL = "energie@solarispv.de"; // Quelle: solarispv.de/impressum
 
-const LOGO_PATH = "/images/logo-solaris-pv.png";
+const LOGO_PATH = "/logo.jpg";
 
 // --- NAP-Konstanten -------------------------------------------------------
 

@@ -58,7 +58,7 @@ export function Sidebar({
     >
       <div className="mb-6 flex items-center justify-center rounded-md bg-white p-3">
         <Image
-          src="/images/logo-solaris-pv.png"
+          src="/logo.jpg"
           alt="Solaris PV"
           width={140}
           height={46}

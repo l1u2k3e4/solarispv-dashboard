@@ -8,10 +8,11 @@ interface LogoProps {
 }
 
 export function Logo({ variant = "default", className, withLink = true }: LogoProps) {
-  const src =
-    variant === "white"
-      ? "/images/logo-solaris-pv-white.png"
-      : "/images/logo-solaris-pv.png";
+  // Beide Varianten zeigen aktuell auf das neue Logo /logo.jpg.
+  // Für die white-Variante (auf dunklem Hintergrund) wird ggf. später eine
+  // separate Datei nachgereicht — bis dahin nutzen wir das gleiche Asset.
+  void variant;
+  const src = "/logo.jpg";
   const inner = (
     <Image
       src={src}

@@ -200,7 +200,7 @@ export function ChatWidget() {
           <div key={`b-${index}`} className="flex items-end gap-2">
             <div className="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-slate-200">
               <Image
-                src="/images/logo-solaris-pv.png"
+                src="/logo.jpg"
                 alt="Logo Solaris PV"
                 width={24}
                 height={24}
@@ -245,7 +245,7 @@ export function ChatWidget() {
       <div className="flex items-center gap-3 bg-navy-500 p-4 text-white">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
           <Image
-            src="/images/logo-solaris-pv.png"
+            src="/logo.jpg"
             alt="Logo Solaris PV"
             width={32}
             height={32}
