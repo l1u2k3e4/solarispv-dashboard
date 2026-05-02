@@ -16,6 +16,7 @@ export function HeroSection() {
         alt=""
         fill
         priority
+        quality={68}
         sizes="100vw"
         placeholder="blur"
         blurDataURL={HERO_BLUR_DATA_URL}
