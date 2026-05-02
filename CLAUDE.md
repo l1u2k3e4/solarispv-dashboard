@@ -282,5 +282,5 @@ Andreas Mellies pflegt die Website-Inhalte NICHT selbst. Luke / die Agentur ist 
 
 ---
 
-**Letzte Änderung:** 2026-05-01 (Prompt 10 — Content-Migration: Stammdaten verifiziert, Footer/Header/Sektionen Solaris, Impressum + Datenschutz angelegt, SEO-Schema-TODOs befüllt, P1-Standortseiten + PROJEKTPLAN aktualisiert)
+**Letzte Änderung:** 2026-05-02 (Prompt 11 — Visuelle Verifikation: Sanity-Schema gefixt, `.env.production` SITE_URL gefixt, DOM-Leak 0/12, Schema verifiziert, Production-Server `:3010` für Mellies-Vorschau · Plus Logo-Tausch: alle 5 Stellen auf `/logo.jpg`)
 **Verantwortlich:** Luke Kozik

@@ -6,13 +6,18 @@ Next.js 14 + Tailwind 3 + Sanity v3 + Vercel. Inhaber **Andreas Mellies**, Büro
 
 ## Stand
 
-Nach **Prompt 10 — Content-Migration** (2026-05-01):
+Nach **Prompt 11 — Visuelle Verifikation** (2026-05-02) + Logo-Tausch ad hoc:
 - Stammdaten verifiziert (NAP, USt-IdNr, Geo)
 - 18/18 Pages bauen grün, 6 P1-Standortseiten als SSG (`/photovoltaik/{moers,neukirchen-vluyn,kamp-lintfort,rheinberg,voerde,niederrhein}`)
 - Impressum + Datenschutz angelegt (Berufshaftpflicht + DS-Re-Generation als BLOCKER vor Live-Gang markiert)
-- Smoke-Test: 11 Routen liefern HTTP 200
+- Sanity-Schema + `.env.production` Sternhoff-Reste gefixt
+- DOM-Leak-Check: **0 Treffer** auf 12 Routen, alle HTTP 200
+- Schema.org JSON-LD verifiziert: 5 Blöcke pro Standortseite mit komplettem Solaris-NAP
+- Logo `/logo.jpg` (2744×900, neu vom User) in allen 5 Code-Stellen aktiv
+- Production-Server `:3010` für interne Mellies-Vorschau bereit
 
 Blocker für Live-Gang siehe `~/Documents/Jobs/SolarisPv/_offene-fragen.md` §B1–B5.
+Phase 3 (UI-Refresh, Prompts 12–16) wartet — siehe `~/Documents/Jobs/SolarisPv/Prompts/00_README.md` §Phase 3.
 
 ## Setup
 

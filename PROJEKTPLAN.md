@@ -34,7 +34,7 @@
 | Tech-Stack | Next.js 14 + Tailwind 3 + Sanity v3 + Vercel |
 | Repo | `/Users/lukekozik/Documents/Jobs/SolarisPv/Webseite Solaris.pv/website/` |
 | Live-Domain (Ziel) | solarispv.de (DNS-Umstellung nach Launch) |
-| Stand | 2026-05-01 (nach Prompt 10 — Content-Migration) |
+| Stand | 2026-05-02 (nach Prompt 11 — Verifikation; Logo-Tausch auf `/logo.jpg` ad hoc) |
 | Audit-Score Alt-Site | 2,0 / 10 (siehe `analyse/02-audit/audit-report.md`) |
 | Geplanter Launch | 8 Wochen ab Mellies-Freigabe Strategie-Brief |
 
@@ -51,7 +51,9 @@
 | 0.2 | Prompt 7 (Asset-Download) | ✅ fertig (`assets/solaris-pv-raw/`) |
 | 0.3 | Prompt 8 (Public-Folder-Migration) | ✅ fertig (Build grün) |
 | 0.4 | Prompt 9 (Branding-Migration aus Logo) | ✅ fertig (Tokens + Fonts + WCAG-Matrix) |
-| 0.5 | Prompt 10 (Content-Migration) | ✅ fertig — diese Iteration |
+| 0.5 | Prompt 10 (Content-Migration) | ✅ fertig (2026-05-01) |
+| 0.6 | Prompt 11 (Verifikation: Build + DOM-Leak + Schema) | ✅ fertig (2026-05-02) — Production-Server `:3010` läuft für Mellies-Vorschau |
+| 0.7 | Logo-Tausch ad hoc | ✅ fertig (2026-05-02) — alle 5 Stellen auf `public/logo.jpg` |
 
 ---
 
