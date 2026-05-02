@@ -53,8 +53,12 @@ export const standortseite = defineType({
       type: "string",
       options: {
         list: [
-          { title: "Bochum (Hauptsitz)", value: "bochum" },
-          { title: "Castrop-Rauxel (Filiale)", value: "castrop" },
+          { title: "Moers (Heimatmarkt)", value: "moers" },
+          { title: "Neukirchen-Vluyn", value: "neukirchen-vluyn" },
+          { title: "Kamp-Lintfort", value: "kamp-lintfort" },
+          { title: "Rheinberg", value: "rheinberg" },
+          { title: "Voerde", value: "voerde" },
+          { title: "Niederrhein (Region-Hub)", value: "niederrhein" },
         ],
       },
     }),
