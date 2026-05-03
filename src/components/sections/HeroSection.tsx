@@ -24,6 +24,19 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster="/images/hero/pv-anlage-hero.jpg"
+        aria-hidden="true"
+        className="absolute inset-0 hidden h-full w-full object-cover object-center motion-reduce:hidden lg:block lg:object-[65%_center]"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy-500/90 via-navy-500/60 to-navy-500/25"
