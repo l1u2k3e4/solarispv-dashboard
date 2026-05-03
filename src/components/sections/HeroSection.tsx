@@ -32,7 +32,7 @@ export function HeroSection() {
         preload="metadata"
         poster="/images/hero/pv-anlage-hero.jpg"
         aria-hidden="true"
-        className="absolute inset-0 hidden h-full w-full object-cover object-center motion-reduce:hidden lg:block lg:object-[65%_center]"
+        className="absolute inset-0 h-full w-full object-cover object-center motion-reduce:hidden lg:object-[65%_center]"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
