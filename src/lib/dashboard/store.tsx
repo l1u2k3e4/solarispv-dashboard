@@ -12,7 +12,7 @@ import {
 import type { Lead, LeadStatus } from "./types";
 import { getMockLeads } from "./mock-leads";
 
-const STORAGE_KEY = "solaris-pv-leads";
+const STORAGE_KEY = "solaris-pv-leads-v2";
 
 export type DashboardStore = {
   leads: Lead[];

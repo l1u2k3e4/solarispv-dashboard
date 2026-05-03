@@ -105,7 +105,7 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       kanal: "whatsapp",
       eingangszeit: iso(now, 1 * HOUR),
       status: "neu",
-      name: "Frau Yıldız",
+      name: "Frau Yildiz",
       telefon: "02841 9988776",
       anliegen:
         "Hallo!! Wechselrichter unserer PV-Anlage zeigt Fehler F23, kein Ertrag mehr. Anlage ist 7 Jahre alt. Können Sie kurzfristig vorbeischauen??",
@@ -113,7 +113,7 @@ export function getMockLeads(now: Date = new Date()): Lead[] {
       kiVorschlaege: [
         {
           typ: "whatsapp",
-          text: "Hallo Frau Yıldız, F23 ist meist ein Isolations-Fehler — das prüfen wir mit Messgerät vor Ort. Wir kommen morgen zwischen 14 und 16 Uhr nach Schwafheim. Wir rufen Sie jetzt einmal kurz an, um die Eckdaten aufzunehmen.",
+          text: "Hallo Frau Yildiz, F23 ist meist ein Isolations-Fehler — das prüfen wir mit Messgerät vor Ort. Wir kommen morgen zwischen 14 und 16 Uhr nach Schwafheim. Wir rufen Sie jetzt einmal kurz an, um die Eckdaten aufzunehmen.",
           confidence: 0.92,
         },
       ],
