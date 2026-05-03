@@ -2,15 +2,22 @@
 
 import Image from "next/image";
 import {
+  Calculator,
   CheckCircle2,
   Inbox,
   LogOut,
   Settings,
+  Users2,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export type SidebarView = "inbox" | "abgeschlossen" | "settings";
+export type SidebarView =
+  | "inbox"
+  | "abgeschlossen"
+  | "pv-rechner"
+  | "stammkunden"
+  | "settings";
 
 type Props = {
   inboxBadge: number;
@@ -39,6 +46,8 @@ export function Sidebar({
   const items: NavItem[] = [
     { id: "inbox", label: "Inbox", icon: Inbox, badge: inboxBadge },
     { id: "abgeschlossen", label: "Abgeschlossen", icon: CheckCircle2 },
+    { id: "pv-rechner", label: "PV-Rechner", icon: Calculator, phase2: true },
+    { id: "stammkunden", label: "Stammkunden", icon: Users2, phase2: true },
     {
       id: "settings",
       label: "Einstellungen",

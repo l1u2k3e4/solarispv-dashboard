@@ -13,6 +13,8 @@ import { DemoBanner } from "@/components/dashboard/DemoBanner";
 import { Sidebar, type SidebarView } from "@/components/dashboard/Sidebar";
 import { LeadList, type LeadListTab } from "@/components/dashboard/LeadList";
 import { LeadDetail } from "@/components/dashboard/LeadDetail";
+import { PvRechnerStubView } from "@/components/dashboard/views/PvRechnerStubView";
+import { StammkundenStubView } from "@/components/dashboard/views/StammkundenStubView";
 import { useDashboard } from "@/lib/dashboard/store";
 
 export function InboxShell() {
@@ -129,50 +131,58 @@ export function InboxShell() {
           />
         </div>
 
-        <div
-          className={cn(
-            "min-h-0 border-r border-slate-200 bg-white",
-            mobilePanel === "list" ? "block" : "hidden",
-            "lg:block"
-          )}
-        >
-          <LeadList
-            leads={leads}
-            selectedId={selectedId}
-            onSelect={handleSelect}
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            className="h-full"
-          />
-        </div>
+        {view === "pv-rechner" || view === "stammkunden" ? (
+          <div className="min-h-0 bg-gray-50 lg:col-span-2">
+            {view === "pv-rechner" ? <PvRechnerStubView /> : <StammkundenStubView />}
+          </div>
+        ) : (
+          <>
+            <div
+              className={cn(
+                "min-h-0 border-r border-slate-200 bg-white",
+                mobilePanel === "list" ? "block" : "hidden",
+                "lg:block"
+              )}
+            >
+              <LeadList
+                leads={leads}
+                selectedId={selectedId}
+                onSelect={handleSelect}
+                activeTab={activeTab}
+                onTabChange={setActiveTab}
+                className="h-full"
+              />
+            </div>
 
-        <div
-          className={cn(
-            "min-h-0",
-            mobilePanel === "detail" ? "block" : "hidden",
-            "lg:block"
-          )}
-        >
-          <LeadDetail
-            lead={selectedLead}
-            onStatusChange={(status) =>
-              selectedLead && updateStatus(selectedLead.id, status)
-            }
-            onNotizenChange={(text) =>
-              selectedLead && updateNotizen(selectedLead.id, text)
-            }
-            onDiscardKi={(idx) =>
-              selectedLead && removeKiVorschlag(selectedLead.id, idx)
-            }
-            onEditKi={(idx, text) =>
-              selectedLead && updateKiVorschlag(selectedLead.id, idx, text)
-            }
-            onSendKi={handleSendKi}
-            onBack={handleBack}
-            showBack
-            className="h-full"
-          />
-        </div>
+            <div
+              className={cn(
+                "min-h-0",
+                mobilePanel === "detail" ? "block" : "hidden",
+                "lg:block"
+              )}
+            >
+              <LeadDetail
+                lead={selectedLead}
+                onStatusChange={(status) =>
+                  selectedLead && updateStatus(selectedLead.id, status)
+                }
+                onNotizenChange={(text) =>
+                  selectedLead && updateNotizen(selectedLead.id, text)
+                }
+                onDiscardKi={(idx) =>
+                  selectedLead && removeKiVorschlag(selectedLead.id, idx)
+                }
+                onEditKi={(idx, text) =>
+                  selectedLead && updateKiVorschlag(selectedLead.id, idx, text)
+                }
+                onSendKi={handleSendKi}
+                onBack={handleBack}
+                showBack
+                className="h-full"
+              />
+            </div>
+          </>
+        )}
       </div>
 
       <Toast
